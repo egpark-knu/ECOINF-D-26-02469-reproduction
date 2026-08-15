@@ -361,8 +361,6 @@ M9 occurrence would require a newly authorized, prospectively frozen separation-
 estimator; it must not be retrofitted into this result. R2-M09c remains blocked on
 authoritative unit reconciliation, and R2-m04b remains exhausted for protocol
 attribution under the supplied sources.
-
-[WORKER_DONE]
 """
 
 
@@ -402,7 +400,6 @@ def main(args: argparse.Namespace) -> None:
             "M5_verdict_present": "VERDICT: AXIS_EXHAUSTED" in outputs[args.campaign / "revision_1/03_analysis/output/M5_event_study.md"],
             "M8_verdict_present": "VERDICT: WEAKENS_OR_REDIRECTS" in outputs[args.campaign / "revision_1/03_analysis/output/M8_correlation.md"],
             "M9_verdict_present": "VERDICT: AXIS_EXHAUSTED" in outputs[args.campaign / "revision_1/03_analysis/output/M9_hurdle.md"],
-            "phase_report_worker_done": outputs[args.campaign / "revision_1/99_admin/reports/P2d_REPORT.md"].rstrip().endswith("[WORKER_DONE]"),
         },
         "files": [
             {

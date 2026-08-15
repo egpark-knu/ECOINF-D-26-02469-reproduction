@@ -40,6 +40,28 @@ FORBIDDEN_TEXT = {
 }
 
 
+_AGENT_FAMILY = _literal("(?:clau", "de|co", "dex|a", "gy)")
+INTERNAL_IDENTITY_REGEXES = {
+    "internal_agent_name": re.compile(
+        _literal(r"\b", _AGENT_FAMILY, r"-[0-9]+\b"), re.IGNORECASE
+    ),
+    "internal_turn_id": re.compile(
+        _literal(r"\bT[0-9]+_", _AGENT_FAMILY, r"[0-9]+_[0-9A-Za-z][0-9A-Za-z_-]*\b"),
+        re.IGNORECASE,
+    ),
+    "internal_completion_field": re.compile(
+        _literal(r"(?<!\[)\b(?:phase_report_)?", "worker", r"_(?:done|turn)\b"), re.IGNORECASE
+    ),
+    "internal_completion_marker": re.compile(
+        _literal(
+            r"\[(?:", "WORKER", "_DONE|", "HP", "_PASS|", "SENTINEL", "_PASS|",
+            "REVIEW", r"_TURN(?::[^]\r\n]+)?|", "APPROVED", r"(?::[^]\r\n]+)?)\]",
+        ),
+        re.IGNORECASE,
+    ),
+}
+
+
 SECRET_REGEXES = {
     "google_style_key": re.compile(_literal("AI", "za", r"[0-9A-Za-z_-]{20,}")),
     "github_style_token": re.compile(_literal("gh", "p_", r"[0-9A-Za-z]{20,}")),
@@ -83,12 +105,20 @@ def scan_paths(paths: list[Path], base: Path) -> list[dict]:
         for name, value in FORBIDDEN_TEXT.items():
             if value.lower() in relative.lower():
                 hits.append({"file": relative, "location": "filename", "pattern": name})
+        for name, pattern in INTERNAL_IDENTITY_REGEXES.items():
+            matches = pattern.findall(relative)
+            if matches:
+                hits.append({"file": relative, "location": "filename", "pattern": name, "count": len(matches)})
         text = _read_scannable(path)
         lower = text.lower()
         for name, value in FORBIDDEN_TEXT.items():
             count = lower.count(value.lower())
             if count:
                 hits.append({"file": relative, "location": "content", "pattern": name, "count": count})
+        for name, pattern in INTERNAL_IDENTITY_REGEXES.items():
+            matches = pattern.findall(text)
+            if matches:
+                hits.append({"file": relative, "location": "content", "pattern": name, "count": len(matches)})
         for name, pattern in SECRET_REGEXES.items():
             matches = pattern.findall(text)
             if matches:
@@ -161,7 +191,7 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
 
     files = release_files(root)
     hits = scan_paths(files, root)
-    scan_counts = {name: 0 for name in [*FORBIDDEN_TEXT, *SECRET_REGEXES]}
+    scan_counts = {name: 0 for name in [*FORBIDDEN_TEXT, *INTERNAL_IDENTITY_REGEXES, *SECRET_REGEXES]}
     for hit in hits:
         scan_counts[hit["pattern"]] += int(hit.get("count", 1))
     gate("portable_tree_scan", not hits, {"files_scanned": len(files), "counts": scan_counts, "hits": hits})

@@ -3,7 +3,6 @@
     "M5_verdict_present": true,
     "M8_verdict_present": true,
     "M9_verdict_present": true,
-    "phase_report_worker_done": true,
     "run_complete_marker": true,
     "run_verification_pass": true
   },

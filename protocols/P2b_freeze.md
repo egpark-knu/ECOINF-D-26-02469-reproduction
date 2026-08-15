@@ -1,7 +1,7 @@
 # P2b FREEZE — hydrologic robustness and basin-preserving inference
 
-Written **before** any adjusted model was fitted or any new coefficient viewed.
-Worker: claude-1 · 2026-08-15 · turn `T1_claude1_5bd767`
+Written **before** any adjusted model was fitted or any new coefficient viewed,
+on 2026-08-15.
 Ledger rows owned: `R2-M02a–g`, `R2-M06a/b`, `R2-m03a` (10 rows).
 
 Everything below is fixed at write time. If a choice here turns out not to be

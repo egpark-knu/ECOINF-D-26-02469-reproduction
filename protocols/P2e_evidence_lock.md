@@ -1,6 +1,6 @@
 # P2e EVIDENCE LOCK — mask-variant uncertainty transfer and ED-03 source closure
 
-Written **before** any recomputation. Worker: claude-1 · turn `T1_claude1_9cb710` · 2026-08-15.
+Written **before** any recomputation, on 2026-08-15.
 
 ---
 
