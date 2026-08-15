@@ -1,4 +1,4 @@
-# M1 Freeze — P2a residence-time reconciliation
+# M1 Freeze — M1 reconciliation residence-time reconciliation
 
 - Protocol ID: `P2a_M1_v1`
 - Original execution identifier: `[sanitized for public release]`
@@ -46,7 +46,7 @@ E1–E5 diagnose the discrepancy. E6 assesses the scientific comparison. These a
 - Nonpositive delta is “direction change/reversal.”
 - A defensible endpoint-specific coefficient different from the common-FE coefficient is an estimand change, not an arithmetic correction.
 - Historical zero cluster SEs and conflicting inference quantities are disclosed.
-- D1 is author-owned. P2a only identifies whether its trigger is present.
+- D1 is author-owned. M1 reconciliation only identifies whether its trigger is present.
 
 ## Post-hoc switching guard
 

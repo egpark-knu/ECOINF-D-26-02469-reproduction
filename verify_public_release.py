@@ -62,6 +62,27 @@ INTERNAL_IDENTITY_REGEXES = {
 }
 
 
+# Publication-facing workflow vocabulary. These are built by concatenation so the
+# scanner file itself does not trip them. Frozen protocol identifiers and recorded
+# upstream provenance paths are exempt; see PROVENANCE_SANITIZATION.md.
+WORKFLOW_REGEXES = {
+    "internal_specification_vocabulary": re.compile(
+        _literal(r"\b", "task", r"\s+", "packet", r"\b|\b", "pre-", "steering", r"\b"), re.IGNORECASE
+    ),
+    "internal_planning_vocabulary": re.compile(
+        _literal(r"\b", "ledger", r"/", "strategy", r"|\b", "critical", r"-path\s+materials\b"),
+        re.IGNORECASE,
+    ),
+    # Repository-root-relative phase directories only. Provenance strings that record
+    # upstream campaign locations (for example "03_analysis/code/P2c/...") are not
+    # repository paths and are preserved verbatim; see PROVENANCE_SANITIZATION.md.
+    "internal_phase_directory": re.compile(
+        _literal(r"(?<![\w/])(?:code|reproduction_output)/", r"P2[a-e]\b"), re.IGNORECASE
+    ),
+    "internal_phase_report": re.compile(_literal(r"\b", "P1", r"\s+report\b"), re.IGNORECASE),
+}
+
+
 SECRET_REGEXES = {
     "google_style_key": re.compile(_literal("AI", "za", r"[0-9A-Za-z_-]{20,}")),
     "github_style_token": re.compile(_literal("gh", "p_", r"[0-9A-Za-z]{20,}")),
@@ -105,7 +126,7 @@ def scan_paths(paths: list[Path], base: Path) -> list[dict]:
         for name, value in FORBIDDEN_TEXT.items():
             if value.lower() in relative.lower():
                 hits.append({"file": relative, "location": "filename", "pattern": name})
-        for name, pattern in INTERNAL_IDENTITY_REGEXES.items():
+        for name, pattern in {**INTERNAL_IDENTITY_REGEXES, **WORKFLOW_REGEXES}.items():
             matches = pattern.findall(relative)
             if matches:
                 hits.append({"file": relative, "location": "filename", "pattern": name, "count": len(matches)})
@@ -115,7 +136,7 @@ def scan_paths(paths: list[Path], base: Path) -> list[dict]:
             count = lower.count(value.lower())
             if count:
                 hits.append({"file": relative, "location": "content", "pattern": name, "count": count})
-        for name, pattern in INTERNAL_IDENTITY_REGEXES.items():
+        for name, pattern in {**INTERNAL_IDENTITY_REGEXES, **WORKFLOW_REGEXES}.items():
             matches = pattern.findall(text)
             if matches:
                 hits.append({"file": relative, "location": "content", "pattern": name, "count": len(matches)})
@@ -191,36 +212,36 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
 
     files = release_files(root)
     hits = scan_paths(files, root)
-    scan_counts = {name: 0 for name in [*FORBIDDEN_TEXT, *INTERNAL_IDENTITY_REGEXES, *SECRET_REGEXES]}
+    scan_counts = {name: 0 for name in [*FORBIDDEN_TEXT, *INTERNAL_IDENTITY_REGEXES, *WORKFLOW_REGEXES, *SECRET_REGEXES]}
     for hit in hits:
         scan_counts[hit["pattern"]] += int(hit.get("count", 1))
     gate("portable_tree_scan", not hits, {"files_scanned": len(files), "counts": scan_counts, "hits": hits})
 
     forbidden_runs = [
-        "data/P2a_M1/runs/20260815T042748Z_c2ac8933",
-        "data/P2d/runs/20260815T045525Z_cf60dc3b",
-        "data/P2d/runs/20260815T045855Z_64e34497",
+        "data/m1_reconciliation/runs/20260815T042748Z_c2ac8933",
+        "data/withdrawn_designs/runs/20260815T045525Z_cf60dc3b",
+        "data/withdrawn_designs/runs/20260815T045855Z_64e34497",
     ]
     present_runs = [name for name in forbidden_runs if (root / name).exists()]
-    final_runs = sorted(path.name for path in (root / "data/P2d/runs").iterdir() if path.is_dir())
+    final_runs = sorted(path.name for path in (root / "data/withdrawn_designs/runs").iterdir() if path.is_dir())
     gate("final_runs_only", not present_runs and final_runs == ["20260815T051100Z_cf60c3e4"], {
-        "forbidden_runs_present": present_runs, "P2d_runs": final_runs,
+        "forbidden_runs_present": present_runs, "withdrawn_designs_runs": final_runs,
     })
 
-    p2c_data_dirs = sorted(path.name for path in (root / "data/P2c").iterdir() if path.is_dir())
-    gate("P2c_v4_only", p2c_data_dirs == ["v4"], {"result_directories": p2c_data_dirs})
+    matchups_data_dirs = sorted(path.name for path in (root / "data/matchups").iterdir() if path.is_dir())
+    gate("matchups_v4_only", matchups_data_dirs == ["v4"], {"result_directories": matchups_data_dirs})
 
-    p2a = _csv(root / "data/P2a_M1/runs/20260815T042826Z_c2ac8933/endpoint_specific_contrasts.csv")
+    p2a = _csv(root / "data/m1_reconciliation/runs/20260815T042826Z_c2ac8933/endpoint_specific_contrasts.csv")
     p2a_by_scope = {row["season_scope"]: row for row in p2a}
     annual = p2a_by_scope["annual_all_samples"]
     bloom = p2a_by_scope["bloom_season_06_10"]
-    p2a_ok = (
+    m1_reconciliation_ok = (
         _close(annual["delta_endpoint_specific_stacked"], 0.539827967701)
         and _close(annual["wcr_p_holm"], 0.025970458984375)
         and _close(bloom["delta_endpoint_specific_stacked"], 0.297021927909)
         and bloom["inference_status"] == "positive_but_not_holm_supported"
     )
-    gate("P2a_submission_values", p2a_ok, {
+    gate("m1_reconciliation_submission_values", m1_reconciliation_ok, {
         "annual_delta": float(annual["delta_endpoint_specific_stacked"]),
         "annual_holm": float(annual["wcr_p_holm"]),
         "bloom_delta": float(bloom["delta_endpoint_specific_stacked"]),
@@ -253,34 +274,34 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
         "public_file_sha256": panel_audit.get("public_file_sha256"),
     })
 
-    funnel = {row["step"]: int(row["count"]) for row in _csv(root / "data/P2b/m03a_record_funnel.csv")}
-    adjusted = _csv(root / "data/P2b/M2_adjusted_estimates.csv")
-    slopes = _csv(root / "data/P2b/M2_per_endpoint_slopes.csv")
-    basins = _csv(root / "data/P2b/M6_basin_inference.csv")
+    funnel = {row["step"]: int(row["count"]) for row in _csv(root / "data/hydrologic_robustness/m03a_record_funnel.csv")}
+    adjusted = _csv(root / "data/hydrologic_robustness/M2_adjusted_estimates.csv")
+    slopes = _csv(root / "data/hydrologic_robustness/M2_per_endpoint_slopes.csv")
+    basins = _csv(root / "data/hydrologic_robustness/M6_basin_inference.csv")
     adjusted_annual = next(row for row in adjusted if row["spec"] == "P_primary")
     bloom_cyano = next(row for row in slopes if row["spec"] == "S3_adjusted" and row["season_scope"] == "bloom_season_06_10" and row["outcome"] == "cyano")
     basin_p = {row["season_scope"]: float(row["ri_p_right"]) for row in basins if row["fixed_effects"] == "weir + basin-by-year"}
-    p2b_ok = (
+    hydrologic_robustness_ok = (
         funnel["C"] == 6748 and funnel["F"] == 6746
         and _close(adjusted_annual["beta"], 0.723617, tolerance=1e-6)
         and _close(bloom_cyano["cluster_p_two_sided"], 0.0862, tolerance=5e-5)
         and _close(basin_p["annual_all_samples"], 0.3348, tolerance=1e-12)
         and _close(basin_p["bloom_season_06_10"], 0.0262, tolerance=1e-12)
     )
-    gate("P2b_submission_values", p2b_ok, {
+    gate("hydrologic_robustness_submission_values", hydrologic_robustness_ok, {
         "source_count": funnel["C"], "analyzed_count": funnel["F"],
         "adjusted_annual_contrast": float(adjusted_annual["beta"]),
         "adjusted_bloom_cyano_p": float(bloom_cyano["cluster_p_two_sided"]),
         "basin_p": basin_p,
     })
 
-    p2c_root = root / "data/P2c/v4"
-    p2c_verification = _json(p2c_root / "verification_v4.json")
-    comparison = _json(p2c_root / "clean_rebuild_comparison_v4.json")
-    robust = _csv(p2c_root / "endpoint_contrast_robustness_v4.csv")
+    matchups_root = root / "data/matchups/v4"
+    p2c_verification = _json(matchups_root / "verification_v4.json")
+    comparison = _json(matchups_root / "clean_rebuild_comparison_v4.json")
+    robust = _csv(matchups_root / "endpoint_contrast_robustness_v4.csv")
     primary = next(row for row in robust if row["window"] == "pm1_2017_2025" and row["specification"] == "within_weir_percentile_midrank" and row["aggregation"] == "equal_per_weir_fisher_z")
     p2c_gates = p2c_verification.get("gates", [])
-    p2c_ok = (
+    matchups_ok = (
         p2c_verification.get("status") == "COMPLETE_VERIFIED_V4"
         and p2c_verification.get("named_gate_count") == 17
         and len(p2c_gates) == 17 and all(item.get("status") == "pass" for item in p2c_gates)
@@ -290,7 +311,7 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
         and comparison.get("status") == "pass" and not comparison.get("mismatches")
         and len(comparison.get("matched_sha256", {})) == 17
     )
-    gate("P2c_v4_submission_values", p2c_ok, {
+    gate("matchups_submission_values", matchups_ok, {
         "status": p2c_verification.get("status"), "gate_count": len(p2c_gates),
         "primary_support": int(primary["n_rows_chla"]), "primary_delta": float(primary["delta_r"]),
         "primary_interval": [float(primary["delta_ci_low"]), float(primary["delta_ci_high"])],
@@ -298,20 +319,20 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
         "clean_comparison_matches": len(comparison.get("matched_sha256", {})),
     })
 
-    p2d_root = root / "data/P2d/runs/20260815T051100Z_cf60c3e4"
-    p2d = {name: _json(p2d_root / f"{name.lower()}_result.json") for name in ("M5", "M8", "M9")}
-    p2d_verification = _json(p2d_root / "verification.json")
+    withdrawn_designs_root = root / "data/withdrawn_designs/runs/20260815T051100Z_cf60c3e4"
+    p2d = {name: _json(withdrawn_designs_root / f"{name.lower()}_result.json") for name in ("M5", "M8", "M9")}
+    p2d_verification = _json(withdrawn_designs_root / "verification.json")
     p2d_statuses = {name: result.get("verdict") for name, result in p2d.items()}
     expected_statuses = {"M5": "AXIS_EXHAUSTED", "M8": "WEAKENS_OR_REDIRECTS", "M9": "AXIS_EXHAUSTED"}
-    p2d_ok = p2d_statuses == expected_statuses and p2d_verification.get("status") == "PASS" and not p2d_verification.get("failed_gates")
-    gate("P2d_adverse_results", p2d_ok, {
+    withdrawn_designs_ok = p2d_statuses == expected_statuses and p2d_verification.get("status") == "PASS" and not p2d_verification.get("failed_gates")
+    gate("withdrawn_designs_adverse_results", withdrawn_designs_ok, {
         "statuses": p2d_statuses, "verification": p2d_verification.get("status"),
         "verification_gate_count": len(p2d_verification.get("gates", {})),
     })
 
-    p2e = _csv(root / "data/P2e/mask_variant_uncertainty.csv")
-    reconciliation = _json(root / "data/P2e/secondary_ci_reconciliation.json")
-    p2e_source_root = root / "data/P2e/source_inputs"
+    p2e = _csv(root / "data/sampling_frame/mask_variant_uncertainty.csv")
+    reconciliation = _json(root / "data/sampling_frame/secondary_ci_reconciliation.json")
+    sampling_frame_source_root = root / "data/sampling_frame/source_inputs"
     expected_p2e_sources = {
         "Round_2/02_analysis/variant_permutation/assignment_permutation_summary.csv": "92ac9a7a17a095e58ddd0bf1bdbda4cbfe3a94da448944940da18cdb7bd72c82",
         "research_execution/02_sampling_frame_gate/gate_results_site_year.csv": "fb03c168a557536c2af58f186c166effc246def0ef9a5c494aad7b7607e3f30f",
@@ -323,15 +344,15 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
         "research_execution/02_sampling_frame_gate/gee_exports/V07_pair_did.csv": "52ba16e2d6b65b54aebdc5afcbcabb6cfe5f0a7ac687c32083a32aee4dc4ac04",
     }
     actual_p2e_sources = {
-        path.relative_to(p2e_source_root).as_posix(): _sha256(path)
-        for path in sorted(p2e_source_root.rglob("*.csv"))
+        path.relative_to(sampling_frame_source_root).as_posix(): _sha256(path)
+        for path in sorted(sampling_frame_source_root.rglob("*.csv"))
     }
-    gate("P2e_source_inputs", actual_p2e_sources == expected_p2e_sources, {
+    gate("sampling_frame_source_inputs", actual_p2e_sources == expected_p2e_sources, {
         "source_count": len(actual_p2e_sources),
         "hashes_match": actual_p2e_sources == expected_p2e_sources,
     })
     v06 = next(row for row in p2e if row["variant_id"] == "V06")
-    p2e_ok = (
+    sampling_frame_ok = (
         len(p2e) == 8
         and all(row["secondary_ci_includes_zero"] == "True" for row in p2e)
         and float(v06["pooled_effect"]) < 0 and v06["historical_verdict"] == "FAIL_SIGN_REVERSAL"
@@ -339,7 +360,7 @@ def verify_release(root: Path, check_manifest: bool = True) -> dict:
         and reconciliation.get("all_variants_confirmed") is True
         and len(reconciliation.get("per_variant", [])) == 8
     )
-    gate("P2e_uncertainty_values", p2e_ok, {
+    gate("sampling_frame_uncertainty_values", sampling_frame_ok, {
         "variant_count": len(p2e), "intervals_include_zero": sum(row["secondary_ci_includes_zero"] == "True" for row in p2e),
         "V06_effect": float(v06["pooled_effect"]), "V06_verdict": v06["historical_verdict"],
         "secondary_method": reconciliation.get("hypothesis"),
