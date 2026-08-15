@@ -1,0 +1,74 @@
+[
+  {
+    "step": "fit",
+    "season": "annual_all_samples",
+    "outcome": "cyano",
+    "fe": "weir + year",
+    "beta": 0.6874057079174496,
+    "se_buggy": 0.10993063831803682,
+    "se_repaired": 0.10993063831803682
+  },
+  {
+    "step": "fit",
+    "season": "annual_all_samples",
+    "outcome": "cyano",
+    "fe": "weir + basin-by-year",
+    "beta": 0.3731748940250119,
+    "se_buggy": 0.32225257248493916,
+    "se_repaired": 0.32225257248493916
+  },
+  {
+    "step": "fit",
+    "season": "annual_all_samples",
+    "outcome": "chlorophyll_a",
+    "fe": "weir + year",
+    "beta": 0.14757774021651276,
+    "se_buggy": 0.20379604413696079,
+    "se_repaired": 0.20379604413696079
+  },
+  {
+    "step": "fit",
+    "season": "annual_all_samples",
+    "outcome": "chlorophyll_a",
+    "fe": "weir + basin-by-year",
+    "beta": -0.502175294136728,
+    "se_buggy": 0.22762075214822838,
+    "se_repaired": 0.22762075214822838
+  },
+  {
+    "step": "fit",
+    "season": "bloom_season_06_10",
+    "outcome": "cyano",
+    "fe": "weir + year",
+    "beta": 0.6186412520414742,
+    "se_buggy": 0.0,
+    "se_repaired": 0.11189926734853534
+  },
+  {
+    "step": "fit",
+    "season": "bloom_season_06_10",
+    "outcome": "cyano",
+    "fe": "weir + basin-by-year",
+    "beta": 0.4375910866654332,
+    "se_buggy": 0.0,
+    "se_repaired": 0.2786431838941246
+  },
+  {
+    "step": "fit",
+    "season": "bloom_season_06_10",
+    "outcome": "chlorophyll_a",
+    "fe": "weir + year",
+    "beta": 0.3216193241323556,
+    "se_buggy": 0.0,
+    "se_repaired": 0.20681814826469763
+  },
+  {
+    "step": "fit",
+    "season": "bloom_season_06_10",
+    "outcome": "chlorophyll_a",
+    "fe": "weir + basin-by-year",
+    "beta": -0.7046913112715658,
+    "se_buggy": 0.0,
+    "se_repaired": 0.3240480371742719
+  }
+]

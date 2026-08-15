@@ -1,0 +1,9 @@
+season_scope,outcome,fixed_effects,beta,ci_low,ci_high,cluster_p_two_sided,ri_p_right,n
+annual_all_samples,cyano,weir + year,0.6874057079174496,0.4530940988313739,0.9217173170035253,1.5468728676653052e-05,0.0002,144
+annual_all_samples,cyano,weir + basin-by-year,0.3731748940250119,-0.31369020515348045,1.0600399932035043,0.26496235192326306,0.0002,144
+annual_all_samples,chlorophyll_a,weir + year,0.14757774021651276,-0.28680324544609237,0.5819587258791179,0.480119988534515,0.0028,144
+annual_all_samples,chlorophyll_a,weir + basin-by-year,-0.502175294136728,-0.9873374428630438,-0.01701314541041221,0.04337961610711245,1.0,144
+bloom_season_06_10,cyano,weir + year,0.6186412520414742,,,,0.0002,144
+bloom_season_06_10,cyano,weir + basin-by-year,0.4375910866654332,,,,0.0002,144
+bloom_season_06_10,chlorophyll_a,weir + year,0.3216193241323556,,,,0.0002,144
+bloom_season_06_10,chlorophyll_a,weir + basin-by-year,-0.7046913112715658,,,,1.0,144

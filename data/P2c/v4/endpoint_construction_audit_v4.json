@@ -1,0 +1,22 @@
+{
+  "chlorophyll_a": {
+    "aggregated_site_dates": 6748,
+    "deduplicated_rows": 6748,
+    "endpoint": "chlorophyll_a",
+    "exact_duplicates_removed": 3,
+    "exact_filtered_rows": 6751,
+    "missing_values": 4,
+    "weirs": 16,
+    "zero_values": 0
+  },
+  "harmful_cyanobacteria": {
+    "aggregated_site_dates": 6745,
+    "deduplicated_rows": 6745,
+    "endpoint": "harmful_cyanobacteria",
+    "exact_duplicates_removed": 3,
+    "exact_filtered_rows": 6748,
+    "missing_values": 2,
+    "weirs": 16,
+    "zero_values": 3434
+  }
+}

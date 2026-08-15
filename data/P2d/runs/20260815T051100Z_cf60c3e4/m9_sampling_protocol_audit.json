@@ -1,0 +1,8 @@
+{
+  "event_triggered_sampling_determined": false,
+  "inference_forbidden": "Unequal observed frequency cannot identify the agency scheduling protocol.",
+  "ledger_id": "R2-m04b",
+  "notes_nonempty_rows": 0,
+  "reason": "Timestamps and panel notes describe observations/provenance but do not state whether agency sampling was routine or bloom-event-triggered.",
+  "status": "AXIS_EXHAUSTED"
+}

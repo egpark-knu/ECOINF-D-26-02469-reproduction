@@ -1,0 +1,3 @@
+season_scope,season_label,test,interaction_beta_cyano_minus_chla,cluster_se,cluster_ci_low,cluster_ci_high,cluster_p_two_sided,ri_p_right_cyano_gt_chla,n_permutations,n_stacked,n_original_weir_years,n_weirs,n_years,fixed_effects,cluster
+annual_all_samples,Annual,stacked_standardized_outcome_log1p_tau_x_cyano,0.887440253669714,0.1792907058011252,0.5052911602668142,1.2695893470726138,0.000174599438830119,0.0002,4999,288,144,16,9,weir + year,weir
+bloom_season_06_10,Bloom season (Jun-Oct),stacked_standardized_outcome_log1p_tau_x_cyano,1.0350637385933135,0.15187298089532514,0.7113541424811642,1.3587733347054627,5.839045628837723e-06,0.0002,4999,288,144,16,9,weir + year,weir

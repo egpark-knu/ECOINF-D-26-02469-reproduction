@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "expected": 0.6874057079174496,
+      "observed": 0.6874057079174496,
+      "pass": true,
+      "target": "annual_all_samples:cyano:beta"
+    },
+    {
+      "expected": 0.14757774021651276,
+      "observed": 0.1475777402165127,
+      "pass": true,
+      "target": "annual_all_samples:chlorophyll_a:beta"
+    },
+    {
+      "expected": 0.6186412520414742,
+      "observed": 0.6186412520414742,
+      "pass": true,
+      "target": "bloom_season_06_10:cyano:beta"
+    },
+    {
+      "expected": 0.3216193241323556,
+      "observed": 0.3216193241323556,
+      "pass": true,
+      "target": "bloom_season_06_10:chlorophyll_a:beta"
+    },
+    {
+      "expected": 0.887440253669714,
+      "observed": 0.887440253669714,
+      "pass": true,
+      "target": "annual_all_samples:interaction:estimate"
+    },
+    {
+      "expected": 0.1792907058011252,
+      "observed": 0.1792907058011252,
+      "pass": true,
+      "target": "annual_all_samples:interaction:se"
+    },
+    {
+      "expected": 0.5052911602668142,
+      "observed": 0.5052911602668142,
+      "pass": true,
+      "target": "annual_all_samples:interaction:ci_low"
+    },
+    {
+      "expected": 1.2695893470726138,
+      "observed": 1.2695893470726138,
+      "pass": true,
+      "target": "annual_all_samples:interaction:ci_high"
+    },
+    {
+      "expected": 0.000174599438830119,
+      "observed": 0.0001745994388301,
+      "pass": true,
+      "target": "annual_all_samples:interaction:p"
+    },
+    {
+      "expected": 0.0002,
+      "observed": 0.0002,
+      "pass": true,
+      "target": "annual_all_samples:interaction:ri_p"
+    },
+    {
+      "expected": 1.0350637385933135,
+      "observed": 1.0350637385933137,
+      "pass": true,
+      "target": "bloom_season_06_10:interaction:estimate"
+    },
+    {
+      "expected": 0.15187298089532514,
+      "observed": 0.1518729808953251,
+      "pass": true,
+      "target": "bloom_season_06_10:interaction:se"
+    },
+    {
+      "expected": 0.7113541424811642,
+      "observed": 0.7113541424811642,
+      "pass": true,
+      "target": "bloom_season_06_10:interaction:ci_low"
+    },
+    {
+      "expected": 1.3587733347054627,
+      "observed": 1.358773334705463,
+      "pass": true,
+      "target": "bloom_season_06_10:interaction:ci_high"
+    },
+    {
+      "expected": 5.839045628837723e-06,
+      "observed": 5.839045628837723e-06,
+      "pass": true,
+      "target": "bloom_season_06_10:interaction:p"
+    },
+    {
+      "expected": 0.0002,
+      "observed": 0.0002,
+      "pass": true,
+      "target": "bloom_season_06_10:interaction:ri_p"
+    }
+  ],
+  "interaction_rows": 2,
+  "legacy_zero_se_rows": 5,
+  "models_rows": 10,
+  "status": "PASS"
+}

@@ -1,0 +1,30 @@
+{
+  "compared_files": 17,
+  "comparison_rule": "byte-identical SHA-256 for every built table, canonical gzip, scientific JSON, report payload, map note, and PNG",
+  "declared_exclusions": [
+    "verification_v4.json",
+    "clean_rebuild_comparison_v4.json"
+  ],
+  "matched_sha256": {
+    "bootstrap_draws_v4.csv.gz": "1b96ae4317aff5c27969b444de80311e11f99c8dc0397fe0a95b3922baafc8fe",
+    "crosswalk_accounting_v4.json": "caa446f3b4fad1528e227b4310f735b6a90a7d6b725ec252e9d43e2917fdd273",
+    "daily_satellite_pixel_weighted_v4.csv": "48d125035f2d4a1eeb821d81b4ae2c16ae9d8662e95688836584b09af624729f",
+    "endpoint_construction_audit_v4.json": "9dfa2d2ee47d288c00fe4a7afe26af2c104a5fa2e28aac1bff70d209f3d3a323",
+    "endpoint_contrast_robustness_v4.csv": "ea4bb654513b6c24e52949865bd89828dae33760d2825a965e62d2d6d4329da7",
+    "leave_one_weir_out_v4.csv": "88c60fc44e5a13664b7acb29d49eefcecbf9ef148d71e309b1ec3ca5b9a5621e",
+    "matchup_pairs_v4.csv": "0a9fce415d906aa5fa0f32dd69133392208d0b40617c6471ed0aadb9fb665a56",
+    "matchup_statistics_v4.csv": "e2687cb1d2cf9fab27dac9e7bdabbde4b25a07db77449642f444b2d559eb8228",
+    "observation_frequency_v4.csv": "99192d36139840d8104b15a5261cb251bafd555235b91599f6b116057700b55e",
+    "reports/M3_matchups.md": "e9fe267bfda84a65ca671f42e1859259011630c1037ee983f891de7ffd4ef30b",
+    "reports/M4_spatial.md": "bd2bba73ea3355d7b0bfa033de0fbd9d5161678d98916b39ed3cc4360ff631d4",
+    "reports/P2c_REPORT.md": "eec5f0aefe00e36608d039542a88e8fb7c06267c5b8543519163e01b468b0990",
+    "source_manifest_v4.json": "38381fbc9d3188374689272e7574ea84d667ac875431fac5231d13e3b3624191",
+    "study_area_map_metadata_v4.json": "76b88ac310b7d8808d85a21e0410f97a8182481a9706a01b70f2ede4c76ddaf2",
+    "study_area_map_sources_v4.md": "063608339e78f3a869393b458a14aa37eb80c615ed863ac5c9395480e0ece65d",
+    "study_area_map_v4.png": "00f3312e187acc4153aaea08eeaa54c3efbfabb1e75cfd3e3d51f12df29f90bb",
+    "zero_and_support_accounting_v4.csv": "3f57ff71a4508059e5751dd9a7db70404894d7977c40f316c6c18f67a6f1564b"
+  },
+  "mismatches": [],
+  "post_verification_report_hashes_equal": true,
+  "status": "pass"
+}

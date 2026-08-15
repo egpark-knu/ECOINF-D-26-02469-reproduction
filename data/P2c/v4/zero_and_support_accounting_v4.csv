@@ -1,0 +1,9 @@
+window,endpoint,matched_rows,complete_case_rows,total_weirs,endpoint_observed_weirs,endpoint_variable_weirs,zero_variance_weirs,zero_count,zero_fraction
+pm1_2017_2025,chlorophyll_a,756,756,16,16,16,,0,0
+pm1_2017_2025,harmful_cyanobacteria,756,756,16,16,13,Gangcheon Weir|Ipo Weir|Yeoju Weir,234,0.30952380952380953
+pm1_2019_2025,chlorophyll_a,680,680,16,16,16,,0,0
+pm1_2019_2025,harmful_cyanobacteria,680,680,16,16,13,Gangcheon Weir|Ipo Weir|Yeoju Weir,209,0.30735294117647061
+pm2_2017_2025,chlorophyll_a,1143,1142,16,16,16,,0,0
+pm2_2017_2025,harmful_cyanobacteria,1143,1142,16,16,13,Gangcheon Weir|Ipo Weir|Yeoju Weir,378,0.3309982486865149
+pm3_2017_2025,chlorophyll_a,1386,1385,16,16,16,,0,0
+pm3_2017_2025,harmful_cyanobacteria,1386,1385,16,16,13,Gangcheon Weir|Ipo Weir|Yeoju Weir,463,0.3342960288808664

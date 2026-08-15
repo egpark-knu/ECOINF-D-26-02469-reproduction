@@ -1,0 +1,147 @@
+{
+  "protocol": "P2e_evidence_lock.md",
+  "task_type": "verification_and_transfer_of_existing_uncertainty",
+  "estimator": "exact treatment/control assignment sign-flip, all 2^n patterns, eps=1e-15",
+  "primary_inference_source": "Round_2/02_analysis/variant_permutation/inference_decision.md",
+  "independent_reimplementation": true,
+  "historical_generator_executed": false,
+  "tolerances": {
+    "effect_vs_hist": 1e-12,
+    "effect_vs_gate": 1e-09,
+    "p_values": 1e-12
+  },
+  "input_hashes_before": {
+    "research_execution/02_sampling_frame_gate/gate_results_site_year.csv": "fb03c168a557536c2af58f186c166effc246def0ef9a5c494aad7b7607e3f30f",
+    "research_execution/02_sampling_frame_gate/gate_summary_table.csv": "575cad69b5e9ce29f427a4d01899a3e529d87ffb5cba6d2a2c584bfc94fad7a3",
+    "research_execution/02_sampling_frame_gate/mask_variant_registry.csv": "8364bd9cc45264ba8a34af59435a72ed07f9cdb76501a12fd03a21195dee1b10",
+    "Round_2/02_analysis/variant_permutation/assignment_permutation_summary.csv": "6110baf566cdbb134b69098ed3f7313ca8bd6d26e7e05077b972b1d77a42b311",
+    "research_execution/02_sampling_frame_gate/gee_exports/V04_pair_did.csv": "a85f417bf1a5779f72fee868a6c996a926458772f355bff97af36dfc4654548a",
+    "research_execution/02_sampling_frame_gate/gee_exports/V05_pair_did.csv": "95398a3665846676d24d980d6c4d3054318dbc903ff4438af028a46705089e58",
+    "research_execution/02_sampling_frame_gate/gee_exports/V06_pair_did.csv": "1a2322330bfbb9f30c8bc91b64ffb4ecb4dfb4bf20ab69eb9b2f4819c39fcc52",
+    "research_execution/02_sampling_frame_gate/gee_exports/V07_pair_did.csv": "52ba16e2d6b65b54aebdc5afcbcabb6cfe5f0a7ac687c32083a32aee4dc4ac04"
+  },
+  "input_hashes_after": {
+    "research_execution/02_sampling_frame_gate/gate_results_site_year.csv": "fb03c168a557536c2af58f186c166effc246def0ef9a5c494aad7b7607e3f30f",
+    "research_execution/02_sampling_frame_gate/gate_summary_table.csv": "575cad69b5e9ce29f427a4d01899a3e529d87ffb5cba6d2a2c584bfc94fad7a3",
+    "research_execution/02_sampling_frame_gate/mask_variant_registry.csv": "8364bd9cc45264ba8a34af59435a72ed07f9cdb76501a12fd03a21195dee1b10",
+    "Round_2/02_analysis/variant_permutation/assignment_permutation_summary.csv": "6110baf566cdbb134b69098ed3f7313ca8bd6d26e7e05077b972b1d77a42b311",
+    "research_execution/02_sampling_frame_gate/gee_exports/V04_pair_did.csv": "a85f417bf1a5779f72fee868a6c996a926458772f355bff97af36dfc4654548a",
+    "research_execution/02_sampling_frame_gate/gee_exports/V05_pair_did.csv": "95398a3665846676d24d980d6c4d3054318dbc903ff4438af028a46705089e58",
+    "research_execution/02_sampling_frame_gate/gee_exports/V06_pair_did.csv": "1a2322330bfbb9f30c8bc91b64ffb4ecb4dfb4bf20ab69eb9b2f4819c39fcc52",
+    "research_execution/02_sampling_frame_gate/gee_exports/V07_pair_did.csv": "52ba16e2d6b65b54aebdc5afcbcabb6cfe5f0a7ac687c32083a32aee4dc4ac04"
+  },
+  "per_variant_gates": [
+    {
+      "variant_id": "V00",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.0124607992883,
+      "hist_p_one_sided": 0.141036987305,
+      "hist_p_two_sided": 0.282073974609,
+      "gate_effect": 0.01246079928833
+    },
+    {
+      "variant_id": "V01",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.0115409871054,
+      "hist_p_one_sided": 0.194458007812,
+      "hist_p_two_sided": 0.388916015625,
+      "gate_effect": 0.0115409871053554
+    },
+    {
+      "variant_id": "V02",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.0119828849941,
+      "hist_p_one_sided": 0.165466308594,
+      "hist_p_two_sided": 0.330932617188,
+      "gate_effect": 0.0119828849940607
+    },
+    {
+      "variant_id": "V03",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.0115409871054,
+      "hist_p_one_sided": 0.194458007812,
+      "hist_p_two_sided": 0.388916015625,
+      "gate_effect": 0.0115409871053554
+    },
+    {
+      "variant_id": "V04",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.00722673325369,
+      "hist_p_one_sided": 0.278167724609,
+      "hist_p_two_sided": 0.556335449219,
+      "gate_effect": 0.007226733253690165
+    },
+    {
+      "variant_id": "V05",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.00750617796912,
+      "hist_p_one_sided": 0.261627197266,
+      "hist_p_two_sided": 0.523254394531,
+      "gate_effect": 0.007506177969124961
+    },
+    {
+      "variant_id": "V06",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": -0.00122764282701,
+      "hist_p_one_sided": 0.539352416992,
+      "hist_p_two_sided": 0.921325683594,
+      "gate_effect": -0.0012276428270138612
+    },
+    {
+      "variant_id": "V07",
+      "G1_n_pairs": true,
+      "G2_permutations": true,
+      "G3_effect_vs_hist": true,
+      "G4_effect_vs_gate": true,
+      "G5_p_one_sided": true,
+      "G6_p_two_sided": true,
+      "hist_effect": 0.00313140704056,
+      "hist_p_one_sided": 0.402389526367,
+      "hist_p_two_sided": 0.804779052734,
+      "gate_effect": 0.003131407040559443
+    }
+  ],
+  "global_gates": {
+    "G7_V01_identical_V03": true,
+    "G8_all_secondary_CIs_include_zero": true,
+    "G9_no_variant_primary_significant": true,
+    "G_all_variants_reproduced": true,
+    "G10_inputs_unchanged": true
+  },
+  "overall": "PASS"
+}

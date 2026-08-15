@@ -1,0 +1,66 @@
+{
+  "duplicate_keys": 0,
+  "input_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
+  "input_sha256": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
+  "missingness": {
+    "log1p_chlorophyll_a_mean": 0,
+    "log1p_harmful_cyanobacteria_total_mean": 0,
+    "tau_days": 0,
+    "weir_name": 0,
+    "year": 0
+  },
+  "n_weirs": 16,
+  "n_years": 9,
+  "nonfinite": {
+    "log1p_chlorophyll_a_mean": 0,
+    "log1p_harmful_cyanobacteria_total_mean": 0,
+    "tau_days": 0,
+    "year": 0
+  },
+  "required_columns": [
+    "tau_days",
+    "weir_name",
+    "year",
+    "log1p_harmful_cyanobacteria_total_mean",
+    "log1p_chlorophyll_a_mean"
+  ],
+  "season_counts": {
+    "annual_all_samples": 144,
+    "bloom_season_06_10": 144
+  },
+  "shape": [
+    288,
+    32
+  ],
+  "shared_support_counts": {
+    "annual_all_samples": 144,
+    "bloom_season_06_10": 144
+  },
+  "tau_nonpositive": 0,
+  "year_range": [
+    2017,
+    2025
+  ],
+  "zscore_metadata": {
+    "annual_all_samples": {
+      "log1p_chlorophyll_a_mean": {
+        "mean": 3.1477119878978104,
+        "sd_ddof1": 0.566137030268458
+      },
+      "log1p_harmful_cyanobacteria_total_mean": {
+        "mean": 6.399385533770312,
+        "sd_ddof1": 3.1140466404656912
+      }
+    },
+    "bloom_season_06_10": {
+      "log1p_chlorophyll_a_mean": {
+        "mean": 3.2259759791479676,
+        "sd_ddof1": 0.6048087814669391
+      },
+      "log1p_harmful_cyanobacteria_total_mean": {
+        "mean": 7.030262142062232,
+        "sd_ddof1": 3.3892208511916846
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "protocol_id": "P2a_M1_v1",
+  "frozen_before_new_results": true,
+  "annual_role": "primary_confirmatory",
+  "bloom_role": "secondary_prespecified",
+  "outcome_scale": "zscore_ddof1_of_log1p_endpoint_within_season_on_shared_support",
+  "exposure": "log1p_tau_days",
+  "primary_estimand": "beta_cyano_minus_beta_chlorophyll_under_endpoint_specific_weir_and_year_FE",
+  "cluster": "weir_name",
+  "primary_test": "two_sided_restricted_wild_cluster_bootstrap_t_exhaustive_rademacher",
+  "n_cluster_sign_patterns": 65536,
+  "secondary_interval": "paired_weir_cluster_bootstrap_percentile",
+  "n_cluster_bootstrap": 9999,
+  "seed": 20260630,
+  "legacy_n_perm": 4999,
+  "alpha": 0.05,
+  "multiplicity": "holm_over_annual_and_bloom_primary_contrast_pvalues",
+  "historical_ri_role": "reproduction_only_not_direct_equality_test",
+  "model_roles": {
+    "historical_common_fe": "reproduction_only",
+    "endpoint_specific_fe": "primary_direct_comparison",
+    "cr1": "diagnostic",
+    "paired_cluster_bootstrap": "secondary_interval",
+    "historical_within_year_ri": "reproduction_only"
+  },
+  "support_policy": "both_outcomes_tau_weir_year_complete_shared_support_or_halt",
+  "contrast_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-10
+  },
+  "legacy_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  },
+  "candidate_explanations": ["E1", "E2", "E3", "E4", "E5", "E6"]
+}

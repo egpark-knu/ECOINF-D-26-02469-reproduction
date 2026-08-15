@@ -1,0 +1,67 @@
+{
+  "audit_id": "P2a_legacy_cluster_se_index_alignment",
+  "audited_at_utc": "2026-08-15T04:35:37.343728+00:00",
+  "groupby_expression": "pd.Series(np.arange(len(clusters))).groupby(clusters.astype(str)).groups",
+  "interpretation": "Resetting the analysis-frame index restores 16 groups and positive Bloom clustered SEs without changing coefficients. This is an E4 legacy uncertainty-code defect, not an explanation for the common-FE versus endpoint-specific coefficient gap.",
+  "records": [
+    {
+      "beta_abs_difference": 0.0,
+      "beta_index_repaired": 0.6874057079174496,
+      "beta_legacy": 0.6874057079174496,
+      "cluster_se_index_repaired": 0.10993063831803682,
+      "cluster_se_legacy": 0.10993063831803682,
+      "legacy_group_count": 16,
+      "n": 144,
+      "original_index_max": 143,
+      "original_index_min": 0,
+      "outcome": "cyano",
+      "reset_group_count": 16,
+      "season_scope": "annual_all_samples"
+    },
+    {
+      "beta_abs_difference": 0.0,
+      "beta_index_repaired": 0.14757774021651276,
+      "beta_legacy": 0.14757774021651276,
+      "cluster_se_index_repaired": 0.20379604413696079,
+      "cluster_se_legacy": 0.20379604413696079,
+      "legacy_group_count": 16,
+      "n": 144,
+      "original_index_max": 143,
+      "original_index_min": 0,
+      "outcome": "chlorophyll_a",
+      "reset_group_count": 16,
+      "season_scope": "annual_all_samples"
+    },
+    {
+      "beta_abs_difference": 0.0,
+      "beta_index_repaired": 0.6186412520414742,
+      "beta_legacy": 0.6186412520414742,
+      "cluster_se_index_repaired": 0.11189926734853534,
+      "cluster_se_legacy": 0.0,
+      "legacy_group_count": 0,
+      "n": 144,
+      "original_index_max": 287,
+      "original_index_min": 144,
+      "outcome": "cyano",
+      "reset_group_count": 16,
+      "season_scope": "bloom_season_06_10"
+    },
+    {
+      "beta_abs_difference": 0.0,
+      "beta_index_repaired": 0.3216193241323556,
+      "beta_legacy": 0.3216193241323556,
+      "cluster_se_index_repaired": 0.20681814826469763,
+      "cluster_se_legacy": 0.0,
+      "legacy_group_count": 0,
+      "n": 144,
+      "original_index_max": 287,
+      "original_index_min": 144,
+      "outcome": "chlorophyll_a",
+      "reset_group_count": 16,
+      "season_scope": "bloom_season_06_10"
+    }
+  ],
+  "root_cause": "cluster_se groups a RangeIndex Series by a caller-indexed clusters Series; pandas aligns the external grouper on labels. Bloom rows retain labels 144..287 while the grouped Series has labels 0..143, producing zero groups and a zero meat matrix.",
+  "scope": "Frozen legacy per-endpoint clustered uncertainty only; no historical file was modified.",
+  "status": "CONFIRMED"
+}

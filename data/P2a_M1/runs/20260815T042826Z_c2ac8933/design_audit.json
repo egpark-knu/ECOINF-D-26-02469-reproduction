@@ -1,0 +1,320 @@
+{
+  "seasons": {
+    "annual_all_samples": {
+      "endpoint_specific_stacked": {
+        "column_names": [
+          "intercept",
+          "log1p_tau",
+          "outcome_is_cyano",
+          "log1p_tau_x_cyano",
+          "weir_name[강천보]",
+          "weir_name[공주보]",
+          "weir_name[구미보]",
+          "weir_name[낙단보]",
+          "weir_name[달성보]",
+          "weir_name[백제보]",
+          "weir_name[상주보]",
+          "weir_name[세종보]",
+          "weir_name[승촌보]",
+          "weir_name[여주보]",
+          "weir_name[이포보]",
+          "weir_name[죽산보]",
+          "weir_name[창녕함안보]",
+          "weir_name[칠곡보]",
+          "weir_name[합천창녕보]",
+          "year[2018]",
+          "year[2019]",
+          "year[2020]",
+          "year[2021]",
+          "year[2022]",
+          "year[2023]",
+          "year[2024]",
+          "year[2025]",
+          "cyano_x_weir_name[강천보]",
+          "cyano_x_weir_name[공주보]",
+          "cyano_x_weir_name[구미보]",
+          "cyano_x_weir_name[낙단보]",
+          "cyano_x_weir_name[달성보]",
+          "cyano_x_weir_name[백제보]",
+          "cyano_x_weir_name[상주보]",
+          "cyano_x_weir_name[세종보]",
+          "cyano_x_weir_name[승촌보]",
+          "cyano_x_weir_name[여주보]",
+          "cyano_x_weir_name[이포보]",
+          "cyano_x_weir_name[죽산보]",
+          "cyano_x_weir_name[창녕함안보]",
+          "cyano_x_weir_name[칠곡보]",
+          "cyano_x_weir_name[합천창녕보]",
+          "cyano_x_year[2018]",
+          "cyano_x_year[2019]",
+          "cyano_x_year[2020]",
+          "cyano_x_year[2021]",
+          "cyano_x_year[2022]",
+          "cyano_x_year[2023]",
+          "cyano_x_year[2024]",
+          "cyano_x_year[2025]"
+        ],
+        "n_original": 144,
+        "n_stacked": 288,
+        "rank": 50,
+        "reference_weir": "강정고령보",
+        "reference_year": "2017",
+        "shape": [
+          288,
+          50
+        ],
+        "stack_order": [
+          "chlorophyll_a",
+          "cyano"
+        ]
+      },
+      "equality_residual": 6.661338147750939e-16,
+      "forbidden_independent_se_diagnostic": 0.23155468651462266,
+      "separate": {
+        "chlorophyll_a": {
+          "column_names": [
+            "intercept",
+            "log1p_tau",
+            "weir_name[강천보]",
+            "weir_name[공주보]",
+            "weir_name[구미보]",
+            "weir_name[낙단보]",
+            "weir_name[달성보]",
+            "weir_name[백제보]",
+            "weir_name[상주보]",
+            "weir_name[세종보]",
+            "weir_name[승촌보]",
+            "weir_name[여주보]",
+            "weir_name[이포보]",
+            "weir_name[죽산보]",
+            "weir_name[창녕함안보]",
+            "weir_name[칠곡보]",
+            "weir_name[합천창녕보]",
+            "year[2018]",
+            "year[2019]",
+            "year[2020]",
+            "year[2021]",
+            "year[2022]",
+            "year[2023]",
+            "year[2024]",
+            "year[2025]"
+          ],
+          "endpoint": "chlorophyll_a",
+          "rank": 25,
+          "reference_weir": "강정고령보",
+          "reference_year": "2017",
+          "shape": [
+            144,
+            25
+          ]
+        },
+        "cyano": {
+          "column_names": [
+            "intercept",
+            "log1p_tau",
+            "weir_name[강천보]",
+            "weir_name[공주보]",
+            "weir_name[구미보]",
+            "weir_name[낙단보]",
+            "weir_name[달성보]",
+            "weir_name[백제보]",
+            "weir_name[상주보]",
+            "weir_name[세종보]",
+            "weir_name[승촌보]",
+            "weir_name[여주보]",
+            "weir_name[이포보]",
+            "weir_name[죽산보]",
+            "weir_name[창녕함안보]",
+            "weir_name[칠곡보]",
+            "weir_name[합천창녕보]",
+            "year[2018]",
+            "year[2019]",
+            "year[2020]",
+            "year[2021]",
+            "year[2022]",
+            "year[2023]",
+            "year[2024]",
+            "year[2025]"
+          ],
+          "endpoint": "cyano",
+          "rank": 25,
+          "reference_weir": "강정고령보",
+          "reference_year": "2017",
+          "shape": [
+            144,
+            25
+          ]
+        }
+      },
+      "unified_cr1_se": 0.21299485427435222,
+      "zscore_metadata": {
+        "log1p_chlorophyll_a_mean": {
+          "mean": 3.1477119878978104,
+          "sd_ddof1": 0.566137030268458
+        },
+        "log1p_harmful_cyanobacteria_total_mean": {
+          "mean": 6.399385533770312,
+          "sd_ddof1": 3.1140466404656912
+        }
+      }
+    },
+    "bloom_season_06_10": {
+      "endpoint_specific_stacked": {
+        "column_names": [
+          "intercept",
+          "log1p_tau",
+          "outcome_is_cyano",
+          "log1p_tau_x_cyano",
+          "weir_name[강천보]",
+          "weir_name[공주보]",
+          "weir_name[구미보]",
+          "weir_name[낙단보]",
+          "weir_name[달성보]",
+          "weir_name[백제보]",
+          "weir_name[상주보]",
+          "weir_name[세종보]",
+          "weir_name[승촌보]",
+          "weir_name[여주보]",
+          "weir_name[이포보]",
+          "weir_name[죽산보]",
+          "weir_name[창녕함안보]",
+          "weir_name[칠곡보]",
+          "weir_name[합천창녕보]",
+          "year[2018]",
+          "year[2019]",
+          "year[2020]",
+          "year[2021]",
+          "year[2022]",
+          "year[2023]",
+          "year[2024]",
+          "year[2025]",
+          "cyano_x_weir_name[강천보]",
+          "cyano_x_weir_name[공주보]",
+          "cyano_x_weir_name[구미보]",
+          "cyano_x_weir_name[낙단보]",
+          "cyano_x_weir_name[달성보]",
+          "cyano_x_weir_name[백제보]",
+          "cyano_x_weir_name[상주보]",
+          "cyano_x_weir_name[세종보]",
+          "cyano_x_weir_name[승촌보]",
+          "cyano_x_weir_name[여주보]",
+          "cyano_x_weir_name[이포보]",
+          "cyano_x_weir_name[죽산보]",
+          "cyano_x_weir_name[창녕함안보]",
+          "cyano_x_weir_name[칠곡보]",
+          "cyano_x_weir_name[합천창녕보]",
+          "cyano_x_year[2018]",
+          "cyano_x_year[2019]",
+          "cyano_x_year[2020]",
+          "cyano_x_year[2021]",
+          "cyano_x_year[2022]",
+          "cyano_x_year[2023]",
+          "cyano_x_year[2024]",
+          "cyano_x_year[2025]"
+        ],
+        "n_original": 144,
+        "n_stacked": 288,
+        "rank": 50,
+        "reference_weir": "강정고령보",
+        "reference_year": "2017",
+        "shape": [
+          288,
+          50
+        ],
+        "stack_order": [
+          "chlorophyll_a",
+          "cyano"
+        ]
+      },
+      "equality_residual": -1.3877787807814457e-15,
+      "forbidden_independent_se_diagnostic": 0.23514929828680653,
+      "separate": {
+        "chlorophyll_a": {
+          "column_names": [
+            "intercept",
+            "log1p_tau",
+            "weir_name[강천보]",
+            "weir_name[공주보]",
+            "weir_name[구미보]",
+            "weir_name[낙단보]",
+            "weir_name[달성보]",
+            "weir_name[백제보]",
+            "weir_name[상주보]",
+            "weir_name[세종보]",
+            "weir_name[승촌보]",
+            "weir_name[여주보]",
+            "weir_name[이포보]",
+            "weir_name[죽산보]",
+            "weir_name[창녕함안보]",
+            "weir_name[칠곡보]",
+            "weir_name[합천창녕보]",
+            "year[2018]",
+            "year[2019]",
+            "year[2020]",
+            "year[2021]",
+            "year[2022]",
+            "year[2023]",
+            "year[2024]",
+            "year[2025]"
+          ],
+          "endpoint": "chlorophyll_a",
+          "rank": 25,
+          "reference_weir": "강정고령보",
+          "reference_year": "2017",
+          "shape": [
+            144,
+            25
+          ]
+        },
+        "cyano": {
+          "column_names": [
+            "intercept",
+            "log1p_tau",
+            "weir_name[강천보]",
+            "weir_name[공주보]",
+            "weir_name[구미보]",
+            "weir_name[낙단보]",
+            "weir_name[달성보]",
+            "weir_name[백제보]",
+            "weir_name[상주보]",
+            "weir_name[세종보]",
+            "weir_name[승촌보]",
+            "weir_name[여주보]",
+            "weir_name[이포보]",
+            "weir_name[죽산보]",
+            "weir_name[창녕함안보]",
+            "weir_name[칠곡보]",
+            "weir_name[합천창녕보]",
+            "year[2018]",
+            "year[2019]",
+            "year[2020]",
+            "year[2021]",
+            "year[2022]",
+            "year[2023]",
+            "year[2024]",
+            "year[2025]"
+          ],
+          "endpoint": "cyano",
+          "rank": 25,
+          "reference_weir": "강정고령보",
+          "reference_year": "2017",
+          "shape": [
+            144,
+            25
+          ]
+        }
+      },
+      "unified_cr1_se": 0.23522341930193152,
+      "zscore_metadata": {
+        "log1p_chlorophyll_a_mean": {
+          "mean": 3.2259759791479676,
+          "sd_ddof1": 0.6048087814669391
+        },
+        "log1p_harmful_cyanobacteria_total_mean": {
+          "mean": 7.030262142062232,
+          "sd_ddof1": 3.3892208511916846
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "A paired bootstrap cannot be formed because the frozen primary occurrence model halted.",
+  "requested_draws": 1999,
+  "saved_draws": 0,
+  "status": "NOT_RUN_PRIMARY_MODEL_HALTED"
+}

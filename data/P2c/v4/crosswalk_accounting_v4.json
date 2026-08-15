@@ -1,0 +1,12 @@
+{
+  "bucket_counts": {
+    "context_only": 7,
+    "exclude": 25
+  },
+  "direct_validation_allowed": 0,
+  "directed_network_available": 0,
+  "interpretation": "negative direct-validation closure; not proof of hydrologic non-connection",
+  "source_logical_path": "source_data/station_reach_crosswalk_direct_validation_closure_v6.csv",
+  "source_sha256": "e573503ef24115a51e845931f9cb0e2268d98fa2cbe255d5a31dba3d33ad4633",
+  "total_rows": 32
+}

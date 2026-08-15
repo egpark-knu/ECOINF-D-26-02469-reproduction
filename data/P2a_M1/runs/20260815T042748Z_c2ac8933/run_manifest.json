@@ -1,0 +1,35 @@
+{
+  "command_arguments": {
+    "cluster_bootstrap": 9999,
+    "freeze": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/M1_freeze.md",
+    "legacy_module": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2a_M1/vendor/hardening_specificity_analysis__c895385a.py",
+    "legacy_n_perm": 4999,
+    "log_root": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/logs/P2a_M1/20260815T042748Z_c2ac8933",
+    "output_root": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042748Z_c2ac8933",
+    "panel": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
+    "protocol": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/M1_protocol_v1.json",
+    "seed": 20260630,
+    "wcr_sign_patterns": 65536
+  },
+  "error": "'NoneType' object has no attribute '__dict__'",
+  "error_type": "AttributeError",
+  "failed_at_utc": "2026-08-15T04:27:49.443613+00:00",
+  "freeze_mtime": 1786767358.4684453,
+  "hashes": {
+    "freeze_sha256": "c909ec5c0823efa08960b4ec4745ef8b4df1f9ad5d01c2af10e408a0c9c9c865",
+    "panel_sha256": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
+    "protocol_sha256": "c2ac89337fd491394f05f1bf8ab780f56f5db625b7a3182d0ac356db123ab1fc",
+    "vendor_sha256": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0"
+  },
+  "paths": {
+    "log_root": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/logs/P2a_M1/20260815T042748Z_c2ac8933",
+    "run_root": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042748Z_c2ac8933"
+  },
+  "protocol_id": "P2a_M1_v1",
+  "protocol_mtime": 1786767358.4681199,
+  "run_id": "20260815T042748Z_c2ac8933",
+  "started_at_utc": "2026-08-15T04:27:49.298612+00:00",
+  "status": "FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2a_M1/run_m1_reconciliation.py\", line 239, in execute\n    models, interaction = run_legacy(\n                          ^^^^^^^^^^^\n  File \"/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2a_M1/legacy_adapter.py\", line 63, in run_legacy\n    module = _load_vendor(vendor_path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2a_M1/legacy_adapter.py\", line 50, in _load_vendor\n    spec.loader.exec_module(module)\n  File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2a_M1/vendor/hardening_specificity_analysis__c895385a.py\", line 41, in <module>\n    @dataclass\n     ^^^^^^^^^\n  File \"/Users/eungyupark/anaconda3/envs/mas/lib/python3.12/dataclasses.py\", line 1275, in dataclass\n    return wrap(cls)\n           ^^^^^^^^^\n  File \"/Users/eungyupark/anaconda3/envs/mas/lib/python3.12/dataclasses.py\", line 1265, in wrap\n    return _process_class(cls, init, repr, eq, order, unsafe_hash,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/eungyupark/anaconda3/envs/mas/lib/python3.12/dataclasses.py\", line 983, in _process_class\n    and _is_type(type, cls, dataclasses, dataclasses.KW_ONLY,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/eungyupark/anaconda3/envs/mas/lib/python3.12/dataclasses.py\", line 749, in _is_type\n    ns = sys.modules.get(cls.__module__).__dict__\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute '__dict__'. Did you mean: '__dir__'?\n",
+  "worker_turn": "T1_codex1_2a8433"
+}

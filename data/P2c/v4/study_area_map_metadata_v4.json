@@ -1,0 +1,28 @@
+{
+  "buffer_radius_m": 5000,
+  "claim_boundary": "buffers may mix upstream lentic and downstream lotic water; no station-point co-location or directed-network connection is implied",
+  "control_count": 16,
+  "control_source": {
+    "logical_path": "source_data/control_reaches.json",
+    "sha256": "a8bf63ec39a6b28dda7bd36a25defca30e3f0ec048b0c1e57fda555f889db64a"
+  },
+  "crs": "EPSG:5179",
+  "hydrorivers_citation": "Lehner, B. and Grill, G. (2013), Hydrological Processes 27:2171-2186.",
+  "hydrorivers_license": "HydroSHEDS data are free for non-commercial and commercial use under the source license.",
+  "locator_source": "Natural Earth admin-0 countries",
+  "locator_source_detail": {
+    "logical_path": "source_data/ne_10m_admin_0_countries.geojson",
+    "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255"
+  },
+  "river_context_records": 845,
+  "river_context_segments": 845,
+  "river_source": {
+    "logical_path": "source_data/hydrorivers_korea_mainstems.json",
+    "sha256": "9e1437f9b45f624ab8a4cb598a081b407ff26481e209da093f94110f2dd95935"
+  },
+  "weir_count": 16,
+  "weir_source": {
+    "logical_path": "source_data/weir_inventory.json",
+    "sha256": "fd75caa126fc4921b9ee602791f1c77474e0989e9a4bde751f99d82527683bd4"
+  }
+}

@@ -4,11 +4,11 @@ This reproducibility package relies on datasets and software governed by their r
 
 1. **Hydrological Data (K-water)**:
    - Source: `water.or.kr`
-   - Terms: Subject to Korea Open Government License (KOGL) terms. Not redistributed in raw form to prevent potential Type 4 (no commercial/derivative) violations.
+   - Terms: Subject to Korea Open Government License (KOGL) terms. Not redistributed in raw form.
 
 2. **Water Quality Data (NIER / WEIS)**:
    - Source: `water.nier.go.kr` / `data.go.kr`
-   - Terms: Typically KOGL Type 1 (free use with attribution).
+   - Terms: Free use with attribution (KOGL).
 
 3. **Copernicus Sentinel-2**:
    - Source: European Space Agency / Copernicus via Google Earth Engine.

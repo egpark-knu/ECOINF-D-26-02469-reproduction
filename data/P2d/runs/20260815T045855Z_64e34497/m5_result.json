@@ -1,0 +1,171 @@
+{
+  "chronology": {
+    "basin_counts": [
+      {
+        "control": 0,
+        "river": "금강",
+        "treated": 3
+      },
+      {
+        "control": 8,
+        "river": "낙동강",
+        "treated": 0
+      },
+      {
+        "control": 0,
+        "river": "영산강",
+        "treated": 2
+      },
+      {
+        "control": 3,
+        "river": "한강(남한강)",
+        "treated": 0
+      }
+    ],
+    "eligible": false,
+    "failure_reasons": [
+      "incomplete_exact_2017_2025_treatment_sequences",
+      "no_within_basin_treated_control_variation"
+    ],
+    "n_resolved": 0,
+    "n_weirs": 16,
+    "unresolved_weirs": [
+      "강정고령보",
+      "강천보",
+      "공주보",
+      "구미보",
+      "낙단보",
+      "달성보",
+      "백제보",
+      "상주보",
+      "세종보",
+      "승촌보",
+      "여주보",
+      "이포보",
+      "죽산보",
+      "창녕함안보",
+      "칠곡보",
+      "합천창녕보"
+    ],
+    "weir_detail": [
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "강정고령보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "강천보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "공주보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "구미보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "낙단보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "달성보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "백제보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "상주보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "세종보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "승촌보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "여주보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "이포보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "죽산보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "창녕함안보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "칠곡보"
+      },
+      {
+        "coverage_final": false,
+        "exact_complete_event": false,
+        "gap_2017_2025_final": false,
+        "resolved": false,
+        "weir_name": "합천창녕보"
+      }
+    ],
+    "within_basin_variation": false
+  },
+  "event_study_run": false,
+  "legacy_comparator_reconciled": true,
+  "legacy_comparator_rows": 4,
+  "parallel_trend_test_run": false,
+  "verdict": "AXIS_EXHAUSTED"
+}

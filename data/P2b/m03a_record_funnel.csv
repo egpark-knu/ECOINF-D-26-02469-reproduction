@@ -1,0 +1,11 @@
+step,description,count,matches_manuscript_7612
+A,"cyanobacteria_panel.csv rows (all variables, long format)",26868,False
+B,  of which 4 genus variables (Anabaena/Aphanizomenon/Microcystis/Oscillatoria),20120,False
+C,  of which variable == harmful_cyanobacteria_total,6748,False
+D,distinct station-date pairs within C,6745,False
+E,duplicate station-date rows in C (C - D),3,False
+F,sum of harmful_cyanobacteria_total_n over the 144 ANNUAL analysis weir-years,6746,False
+G,sum of harmful_cyanobacteria_total_n over the 144 BLOOM analysis weir-years,2919,False
+H,rows in C outside 2017-2025,0,False
+I,distinct stations in C,16,False
+J,MANUSCRIPT CLAIM (Section 2 and Table 1 total),7612,True

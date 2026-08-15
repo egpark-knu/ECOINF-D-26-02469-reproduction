@@ -1,0 +1,5 @@
+window,part,calendar_balanced,n,n_weirs,coefficient_log2_tau,cluster_se,ci_low,ci_high,p_two_sided,effect_ratio_per_tau_doubling,effect_percent_per_tau_doubling,converged,iterations,model_status,error_type,error_message,p_holm_primary_family
+primary_june_october,occurrence,False,2917,16,,,,,,,,False,,HALTED,ValueError,logit failed to converge,
+primary_june_october,occurrence,True,705,16,,,,,,,,False,,HALTED,ValueError,logit failed to converge,
+sensitivity_july_september,occurrence,False,1718,16,,,,,,,,False,,HALTED,ValueError,logit failed to converge,
+sensitivity_july_september,occurrence,True,420,16,,,,,,,,False,,HALTED,ValueError,logit failed to converge,

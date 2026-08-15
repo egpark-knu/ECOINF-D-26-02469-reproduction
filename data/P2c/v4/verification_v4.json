@@ -1,0 +1,232 @@
+{
+  "failures": [],
+  "gates": [
+    {
+      "evidence": {
+        "missing": [],
+        "required_count": 17
+      },
+      "name": "required_artifacts",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "drift_roles": [],
+        "freeze_sha256": "4786e155c9346292f74c6e397f278c1e70b245ed48a44e84752f7e5e920d3a2c",
+        "packet_sha256": "46ff6f8f3f8239e6f711b2e93a1d07b916499542dff2eabb4bbd3d6f64b9084f",
+        "source_count": 20
+      },
+      "name": "source_hashes_and_freeze_identity",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "first_output_mtime_epoch": 1786773564.1145706,
+        "freeze_mtime_epoch": 1786772265.5950363,
+        "packet_mtime_epoch": 1786772133.1669405
+      },
+      "name": "freeze_ordering",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "max_absolute_recalculation_error": 1.1102230246251565e-16,
+        "rows": 1792
+      },
+      "name": "pixel_weighted_daily_identity",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "bad_selections": 0,
+        "pairs_by_window": {
+          "pm1_2017_2025": 756,
+          "pm1_2019_2025": 680,
+          "pm2_2017_2025": 1143,
+          "pm3_2017_2025": 1386
+        },
+        "total_pairs": 3965
+      },
+      "name": "outcome_blind_minimum_lag_and_symmetric_ties",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "chlorophyll_a": {
+          "aggregated_site_dates": 6748,
+          "deduplicated_rows": 6748,
+          "endpoint": "chlorophyll_a",
+          "exact_duplicates_removed": 3,
+          "exact_filtered_rows": 6751,
+          "missing_values": 4,
+          "weirs": 16,
+          "zero_values": 0
+        },
+        "harmful_cyanobacteria": {
+          "aggregated_site_dates": 6745,
+          "deduplicated_rows": 6745,
+          "endpoint": "harmful_cyanobacteria",
+          "exact_duplicates_removed": 3,
+          "exact_filtered_rows": 6748,
+          "missing_values": 2,
+          "weirs": 16,
+          "zero_values": 3434
+        }
+      },
+      "name": "exact_endpoint_filter_and_duplicate_audit",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "expected_rows": 96,
+        "minimum_common_weirs": 13,
+        "minimum_finite_bootstrap_draws": 3000,
+        "rows": 96
+      },
+      "name": "statistics_complete_and_finite",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "analysis_cells": 96,
+        "draws_per_cell": [
+          3000
+        ],
+        "paired_common_hash_mismatches": 0,
+        "rows": 288000,
+        "seed": 20260815
+      },
+      "name": "paired_weir_bootstrap_draws",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "conclusion": [
+          "not_robust"
+        ],
+        "placeholder_pattern_found": false,
+        "primary_pm1_delta_range": [
+          0.0472882501868004,
+          0.2409874992271575
+        ],
+        "rows": 24
+      },
+      "name": "endpoint_contrast_robustness",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "analysis_cells": 96,
+        "finite_associations": 1536,
+        "omissions_per_cell": [
+          16
+        ],
+        "rows": 1536
+      },
+      "name": "leave_one_weir_out_coverage",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "rows": 144,
+        "site_dates_2017_2018": 135,
+        "site_dates_2019_2025": 1657,
+        "sites": 16,
+        "years": [
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "name": "observation_frequency_144_and_archive_boundary",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "minimum_variable_weirs": 13,
+        "primary_zero_counts": {
+          "chlorophyll_a": 0,
+          "harmful_cyanobacteria": 234
+        },
+        "rows": 8
+      },
+      "name": "zero_and_support_accounting",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "bucket_counts": {
+          "context_only": 7,
+          "exclude": 25
+        },
+        "direct_validation_allowed": 0,
+        "directed_network_available": 0,
+        "interpretation": "negative direct-validation closure; not proof of hydrologic non-connection",
+        "source_logical_path": "source_data/station_reach_crosswalk_direct_validation_closure_v6.csv",
+        "source_sha256": "e573503ef24115a51e845931f9cb0e2268d98fa2cbe255d5a31dba3d33ad4633",
+        "total_rows": 32
+      },
+      "name": "crosswalk_closure",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "buffer_radius_m": 5000,
+        "controls": 16,
+        "crs": "EPSG:5179",
+        "dimensions_pixels": [
+          2259,
+          2798
+        ],
+        "manual_visual_inspection": "readable target/control symbols, labels, legend, scale bar, north arrow, four-river colors, and Korea inset confirmed",
+        "weirs": 16
+      },
+      "name": "map_features_provenance_and_visual_inspection",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "failures": [],
+        "files_scanned": 17
+      },
+      "name": "relative_paths_secrets_and_semantics",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "endpoint_conclusion": "not_robust",
+        "legacy_754_or_233_present": false,
+        "primary_pair_count_derived_from_matchup_table": 756,
+        "report_support_semantics_pass": true,
+        "required_phrases": [
+          "dedicated cloud-shadow",
+          "QA60 nominal support is 60 m",
+          "5-km cross-weir buffer can mix upstream lentic and downstream lotic water"
+        ]
+      },
+      "name": "reports_adverse_result_limitations_and_v4_support",
+      "status": "pass"
+    },
+    {
+      "evidence": {
+        "compared_files": 17,
+        "declared_exclusions": [
+          "verification_v4.json",
+          "clean_rebuild_comparison_v4.json"
+        ],
+        "mismatches": []
+      },
+      "name": "second_clean_rebuild",
+      "status": "pass"
+    }
+  ],
+  "named_gate_count": 17,
+  "status": "COMPLETE_VERIFIED_V4",
+  "verification_scope": "scientific construction, cluster inference, LOO, frequency, crosswalk, map, provenance, semantics, and deterministic clean rebuild"
+}

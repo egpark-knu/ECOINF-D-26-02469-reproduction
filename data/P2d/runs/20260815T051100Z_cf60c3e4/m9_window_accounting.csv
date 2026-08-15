@@ -1,0 +1,5 @@
+window,months,n,zeros,positives,n_weirs,n_weir_year_month_cells
+primary_june_october,6;7;8;9;10,2917,827,2090,16,705
+sensitivity_may_october,5;6;7;8;9;10,3538,1233,2305,16,846
+sensitivity_july_september,7;8;9,1718,401,1317,16,420
+sensitivity_annual,1;2;3;4;5;6;7;8;9;10;11;12,6743,3434,3309,16,1669

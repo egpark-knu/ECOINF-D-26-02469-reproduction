@@ -1,0 +1,428 @@
+{
+  "artifact_ledger": {
+    "artifacts_hashed": 25,
+    "excludes": [
+      "COMPLETE",
+      "artifact_hashes.csv",
+      "verification.json"
+    ],
+    "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/artifact_hashes.csv",
+    "sha256": "eb98792113368eddca1b0bcee5feaa385b5e083dfdbf2810dfb3e5d946e2ef82"
+  },
+  "failed_gates": [],
+  "gates": {
+    "M5_axis_exhaustion_evidence": {
+      "evidence": {
+        "chronology": {
+          "basin_counts": [
+            {
+              "control": 0,
+              "river": "금강",
+              "treated": 3
+            },
+            {
+              "control": 8,
+              "river": "낙동강",
+              "treated": 0
+            },
+            {
+              "control": 0,
+              "river": "영산강",
+              "treated": 2
+            },
+            {
+              "control": 3,
+              "river": "한강(남한강)",
+              "treated": 0
+            }
+          ],
+          "eligible": false,
+          "failure_reasons": [
+            "incomplete_exact_2017_2025_treatment_sequences",
+            "no_within_basin_treated_control_variation"
+          ],
+          "n_resolved": 0,
+          "n_weirs": 16,
+          "unresolved_weirs": [
+            "강정고령보",
+            "강천보",
+            "공주보",
+            "구미보",
+            "낙단보",
+            "달성보",
+            "백제보",
+            "상주보",
+            "세종보",
+            "승촌보",
+            "여주보",
+            "이포보",
+            "죽산보",
+            "창녕함안보",
+            "칠곡보",
+            "합천창녕보"
+          ],
+          "weir_detail": [
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "강정고령보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "강천보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "공주보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "구미보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "낙단보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "달성보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "백제보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "상주보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "세종보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "승촌보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "여주보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "이포보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "죽산보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "창녕함안보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "칠곡보"
+            },
+            {
+              "coverage_final": false,
+              "exact_complete_event": false,
+              "gap_2017_2025_final": false,
+              "resolved": false,
+              "weir_name": "합천창녕보"
+            }
+          ],
+          "within_basin_variation": false
+        },
+        "event_study_run": false,
+        "legacy_comparator_reconciled": true,
+        "legacy_comparator_rows": 4,
+        "parallel_trend_test_run": false,
+        "verdict": "AXIS_EXHAUSTED"
+      },
+      "status": "PASS"
+    },
+    "M5_historical_comparator_reconciliation": {
+      "evidence": {
+        "max_abs_diff": 9.540979117872439e-17,
+        "rows": 4
+      },
+      "status": "PASS"
+    },
+    "M8_common_support_and_resample_counts": {
+      "evidence": {
+        "bootstrap_draws": {
+          "annual_all_samples": 9999,
+          "bloom_season_06_10": 9999
+        },
+        "sign_patterns": {
+          "annual_all_samples": 65536,
+          "bloom_season_06_10": 65536
+        },
+        "support": [
+          {
+            "n": 142,
+            "n_weirs": 16,
+            "season_scope": "annual_all_samples"
+          },
+          {
+            "n": 142,
+            "n_weirs": 16,
+            "season_scope": "bloom_season_06_10"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    "M8_frozen_verdict_rule": {
+      "evidence": {
+        "annual": {
+          "bootstrap_ci_high": 0.91696989555893,
+          "bootstrap_ci_low": 0.131477288434075,
+          "bootstrap_draws": 9999,
+          "branch_verdict": "WEAKENS_OR_REDIRECTS",
+          "exact_p_two_sided": 0.030975341796875,
+          "jackknife_pseudo_mean": 0.5321475589334601,
+          "jackknife_se": 0.2191512450516443,
+          "jackknife_t": 2.4282205597693785,
+          "n": 142,
+          "n_weirs": 16,
+          "season_scope": "annual_all_samples",
+          "sign_patterns": 65536,
+          "spearman_delta_chla_minus_cyano": 0.5107944845521923,
+          "spearman_r_chla": 0.7342908814290295,
+          "spearman_r_cyano": 0.2234963968768371
+        },
+        "spatial_dominance_recomputed": true
+      },
+      "status": "PASS"
+    },
+    "M9_primary_axis_exhaustion": {
+      "evidence": {
+        "all_positive_weirs": [
+          "강정고령보",
+          "달성보",
+          "창녕함안보"
+        ],
+        "bootstrap": {
+          "reason": "A paired bootstrap cannot be formed because the frozen primary occurrence model halted.",
+          "requested_draws": 1999,
+          "saved_draws": 0,
+          "status": "NOT_RUN_PRIMARY_MODEL_HALTED"
+        },
+        "primary_models": [
+          {
+            "calendar_balanced": false,
+            "ci_high": NaN,
+            "ci_low": NaN,
+            "cluster_se": NaN,
+            "coefficient_log2_tau": NaN,
+            "converged": false,
+            "effect_percent_per_tau_doubling": NaN,
+            "effect_ratio_per_tau_doubling": NaN,
+            "error_message": "logit failed to converge",
+            "error_type": "ValueError",
+            "iterations": NaN,
+            "model_status": "HALTED",
+            "n": 2917,
+            "n_weirs": 16,
+            "p_holm_primary_family": NaN,
+            "p_two_sided": NaN,
+            "part": "occurrence",
+            "window": "primary_june_october"
+          },
+          {
+            "calendar_balanced": false,
+            "ci_high": 0.563008203821684,
+            "ci_low": -0.0118227940592731,
+            "cluster_se": 0.1348450867810692,
+            "coefficient_log2_tau": 0.2755927048812054,
+            "converged": true,
+            "effect_percent_per_tau_doubling": 31.73112203185713,
+            "effect_ratio_per_tau_doubling": 1.3173112203185713,
+            "error_message": NaN,
+            "error_type": NaN,
+            "iterations": 1.0,
+            "model_status": "FIT",
+            "n": 2090,
+            "n_weirs": 16,
+            "p_holm_primary_family": NaN,
+            "p_two_sided": 0.058948856740891,
+            "part": "positive",
+            "window": "primary_june_october"
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    "M9_separate_blockers_preserved": {
+      "evidence": {
+        "sampling_protocol": {
+          "event_triggered_sampling_determined": false,
+          "inference_forbidden": "Unequal observed frequency cannot identify the agency scheduling protocol.",
+          "ledger_id": "R2-m04b",
+          "notes_nonempty_rows": 0,
+          "reason": "Timestamps and panel notes describe observations/provenance but do not state whether agency sampling was routine or bloom-event-triggered.",
+          "status": "AXIS_EXHAUSTED"
+        },
+        "threshold": {
+          "conversion_applied": false,
+          "evidence_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/insitu_reversal/alert_exceedance_as_reported_screen.csv",
+          "evidence_sha256": "5ff9c6dfa8a0328d3e8df8bba637d933917b67c2c27d2f9b1f87677f37591a4c",
+          "ledger_id": "R2-M09c",
+          "reason": "No authoritative in-scope unit reconciliation; exceedance was not analyzed.",
+          "source_unit": "Cells/100mL",
+          "status": "BLOCKED",
+          "threshold_language_unit": "cells/mL"
+        }
+      },
+      "status": "PASS"
+    },
+    "M9_source_and_dedup_accounting": {
+      "evidence": {
+        "duplicate_measurement_keys": 3,
+        "eligible_rows": 6743,
+        "exact_duplicate_rows_collapsed": 3,
+        "excluded_after_exact_dedup_for_missing_or_join": 2,
+        "harmful_total_rows": 6748,
+        "missing_value": 2,
+        "n_weirs": 16,
+        "positives": 3309,
+        "raw_total_rows": 26868,
+        "source_units": [
+          "Cells/100mL"
+        ],
+        "year_max": 2025,
+        "year_min": 2017,
+        "zeros": 3434
+      },
+      "status": "PASS"
+    },
+    "amendment_not_backdated_into_first_run": {
+      "evidence": {
+        "amendment_mtime": 1786770209.252046,
+        "first_run_created_at": "2026-08-15T04:55:26.278469+00:00"
+      },
+      "status": "PASS"
+    },
+    "analysis_manifest_complete": {
+      "evidence": "ANALYSIS_COMPLETE_AWAITING_VERIFICATION",
+      "status": "PASS"
+    },
+    "branch_specific_protocol_map": {
+      "evidence": {
+        "M5": [
+          "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf"
+        ],
+        "M8": [
+          "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf"
+        ],
+        "M9": [
+          "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
+          "c3e4fe46dff9f30978e2890187628cb9a77b48e50b6dcaee5a8dc40799f52c4e"
+        ]
+      },
+      "status": "PASS"
+    },
+    "fresh_protocols_predate_fresh_run": {
+      "evidence": {
+        "protocol_records": [
+          {
+            "mtime": 1786770127.4636102,
+            "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_freeze_v1_preanalysis.md",
+            "sha256": "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
+            "size_bytes": 10798
+          },
+          {
+            "mtime": 1786770209.252046,
+            "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_M9_amendment_v1_1.md",
+            "sha256": "c3e4fe46dff9f30978e2890187628cb9a77b48e50b6dcaee5a8dc40799f52c4e",
+            "size_bytes": 3421
+          }
+        ],
+        "run_created_epoch": 1786770638.791975
+      },
+      "status": "PASS"
+    },
+    "immutable_base_hash": {
+      "evidence": "revision_1/03_analysis/frozen_protocols/P2d_freeze_v1_preanalysis.md",
+      "status": "PASS"
+    },
+    "no_symlink_artifacts": {
+      "evidence": [],
+      "status": "PASS"
+    },
+    "pre_result_base_content_provenance": {
+      "evidence": {
+        "claim": "content hash predates first-run results; immutable-copy mtime is not used",
+        "first_run_created_at": "2026-08-15T04:55:26.278469+00:00",
+        "recorded_protocol": {
+          "mtime": 1786769534.9081,
+          "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_freeze.md",
+          "sha256": "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
+          "size_bytes": 10798
+        }
+      },
+      "status": "PASS"
+    },
+    "separate_amendment_hash": {
+      "evidence": "revision_1/03_analysis/frozen_protocols/P2d_M9_amendment_v1_1.md",
+      "status": "PASS"
+    }
+  },
+  "run_root": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4",
+  "status": "PASS",
+  "verified_at_utc": "2026-08-15T05:18:06.786836+00:00",
+  "warnings": [
+    {
+      "code": "NONCOMPUTATIONAL_LEDGER_SOURCE_DRIFT",
+      "current_mtime": 1786769789.3866253,
+      "current_sha256": "70f2649e3a76764117ee6d06a01c5466b39b7ab171cbd46de954c6959c343b1d",
+      "frozen_sha256": "5c55ed42f8dd264e44436208de334c22f8c9858691be46935a34a1e0945708cd",
+      "scope": "The ledger is not a numerical model input; frozen branch definitions and all computational sources are separately hashed. Prior ledger bytes were not preserved, so an exact row-level diff is unavailable."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "analysis": "P2c_v4_postresult_fresh",
+  "bootstrap_draws": 3000,
+  "bootstrap_seed": 20260815,
+  "command": "python v4_build.py --out-dir ../../output/P2c/v4",
+  "freeze_sha256": "4786e155c9346292f74c6e397f278c1e70b245ed48a44e84752f7e5e920d3a2c",
+  "packages": {
+    "Pillow": "12.2.0",
+    "matplotlib": "3.10.9",
+    "numpy": "2.4.4",
+    "pandas": "2.3.3",
+    "pyproj": "3.7.2",
+    "scipy": "1.17.1"
+  },
+  "runtime": {
+    "executable_name": "python3.12",
+    "python": "3.12.13"
+  },
+  "sources": [
+    {
+      "logical_path": "source_packet/P2c_v4_fresh_implementation_packet.md",
+      "mtime_epoch": 1786772133.1669405,
+      "role": "v4_task_packet",
+      "sha256": "46ff6f8f3f8239e6f711b2e93a1d07b916499542dff2eabb4bbd3d6f64b9084f",
+      "size_bytes": 6963
+    },
+    {
+      "logical_path": "source_packet/P2c_v3_execution_packet.md",
+      "mtime_epoch": 1786771086.5857584,
+      "role": "v3_design_packet",
+      "sha256": "440a99a55a37fa80551c51fce638499ae180145266ab559497d9188dd2a76434",
+      "size_bytes": 10267
+    },
+    {
+      "logical_path": "source_packet/P2c_stuck_debate.json",
+      "mtime_epoch": 1786770991.7581925,
+      "role": "debate",
+      "sha256": "9b435d140c6ad826f7746605d751dfa6d490ac8c7ed410fdfef06ea57d2fa2bc",
+      "size_bytes": 103729
+    },
+    {
+      "logical_path": "99_admin/reports/P2c_v3_AGY1_REJECTED.md",
+      "mtime_epoch": 1786771647.576683,
+      "role": "rejected_v3_audit",
+      "sha256": "f534e74df7d9b386cb43a2245b22f9caba7659657f59e069005085bc14d65e69",
+      "size_bytes": 2346
+    },
+    {
+      "logical_path": "00_decision/reviewer_comments_verbatim.md",
+      "mtime_epoch": 1786764812.073155,
+      "role": "reviewer_comments",
+      "sha256": "0e3c4954457344ad66e14ccdff0c63d67afc0d5f07f8353c41a2397a19279522",
+      "size_bytes": 32707
+    },
+    {
+      "logical_path": "01_intake/comment_ledger.csv",
+      "mtime_epoch": 1786772053.6022813,
+      "role": "comment_ledger",
+      "sha256": "12a467e7f91346d7184f4015784f1a4d63cc9f5d37bde00383504a5c66bc2fd4",
+      "size_bytes": 50063
+    },
+    {
+      "logical_path": "source_packet/P2c_official_archive_note.md",
+      "mtime_epoch": 1786770129.815981,
+      "role": "archive_note",
+      "sha256": "f15940b3db06d69aba27123fdb174265806fd6108ec3ecec55b0671f255d43bf",
+      "size_bytes": 1857
+    },
+    {
+      "logical_path": "03_analysis/output/P2c/v2/scene_level_matchups_v2.csv",
+      "mtime_epoch": 1786768146.8184628,
+      "role": "scene_v2",
+      "sha256": "0e195ca3648a34b4f55858e5df9864075f4aa75a909d841c28f99d37c74e37cc",
+      "size_bytes": 528149
+    },
+    {
+      "logical_path": "03_analysis/code/P2c/v2_scene_level_export.py",
+      "mtime_epoch": 1786768073.487756,
+      "role": "scene_code_v2",
+      "sha256": "06689a7504cf7f80ba310c34eea88954f6bb0620ed553121caea76602b73f7ac",
+      "size_bytes": 5172
+    },
+    {
+      "logical_path": "03_analysis/code/P2c/v2_matchup_analysis.py",
+      "mtime_epoch": 1786768168.2095964,
+      "role": "matchup_code_v2",
+      "sha256": "389aaa1fc04b6b2ac60a23145253a86df3664100703ae473f25e5009632e703d",
+      "size_bytes": 6082
+    },
+    {
+      "logical_path": "03_analysis/code/P2c/v2_study_map.py",
+      "mtime_epoch": 1786768204.3325524,
+      "role": "map_code_v2",
+      "sha256": "012106602b813143d4bca48dcbd7cb2ff9676f4f9ec083f9609524d106db32ee",
+      "size_bytes": 2567
+    },
+    {
+      "logical_path": "source_data/insitu/cyanobacteria_panel.csv",
+      "mtime_epoch": 1782780875.8181567,
+      "role": "cyano_raw",
+      "sha256": "c958efe78888e8a0866c8cf3ab0c06ee74724c84e049feb8dc95126d3f952e2b",
+      "size_bytes": 13543819
+    },
+    {
+      "logical_path": "source_data/insitu/chlorophyll_panel.csv",
+      "mtime_epoch": 1782780876.0913596,
+      "role": "chla_raw",
+      "sha256": "8a9acfd0828d5f4d441ded7caa1706ccd980e16417467a58c13d8006765f5f49",
+      "size_bytes": 16863811
+    },
+    {
+      "logical_path": "source_data/station_reach_crosswalk_direct_validation_closure_v6.csv",
+      "mtime_epoch": 1781587435.7323513,
+      "role": "crosswalk",
+      "sha256": "e573503ef24115a51e845931f9cb0e2268d98fa2cbe255d5a31dba3d33ad4633",
+      "size_bytes": 55374
+    },
+    {
+      "logical_path": "source_data/weir_inventory.json",
+      "mtime_epoch": 1774775813.047697,
+      "role": "weirs",
+      "sha256": "fd75caa126fc4921b9ee602791f1c77474e0989e9a4bde751f99d82527683bd4",
+      "size_bytes": 6510
+    },
+    {
+      "logical_path": "source_data/control_reaches.json",
+      "mtime_epoch": 1774775812.8369765,
+      "role": "controls",
+      "sha256": "a8bf63ec39a6b28dda7bd36a25defca30e3f0ec048b0c1e57fda555f889db64a",
+      "size_bytes": 7427
+    },
+    {
+      "logical_path": "source_data/hydrorivers_korea_mainstems.json",
+      "mtime_epoch": 1781675471.5764947,
+      "role": "hydrorivers",
+      "sha256": "9e1437f9b45f624ab8a4cb598a081b407ff26481e209da093f94110f2dd95935",
+      "size_bytes": 221882
+    },
+    {
+      "logical_path": "source_data/ne_10m_admin_0_countries.geojson",
+      "mtime_epoch": 1781667879.2485294,
+      "role": "natural_earth",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "size_bytes": 13287234
+    },
+    {
+      "logical_path": "source_data/HydroRIVERS_TechDoc_v10.pdf",
+      "mtime_epoch": 1572108062.0,
+      "role": "hydrorivers_documentation",
+      "sha256": "4afcdb2b54b93793a0196c2795ffe8ba6e7364a2ef31ecc2f783a7dd3b5df573",
+      "size_bytes": 534461
+    },
+    {
+      "logical_path": "03_analysis/frozen_protocols/P2c_freeze_v4_postresult_fresh.md",
+      "mtime_epoch": 1786772265.5950363,
+      "role": "freeze",
+      "sha256": "4786e155c9346292f74c6e397f278c1e70b245ed48a44e84752f7e5e920d3a2c",
+      "size_bytes": 14886
+    }
+  ]
+}

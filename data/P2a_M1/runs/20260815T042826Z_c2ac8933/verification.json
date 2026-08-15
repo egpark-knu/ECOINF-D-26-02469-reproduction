@@ -1,0 +1,372 @@
+{
+  "gates": [
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933",
+      "expected": [],
+      "gate_id": "V01_REQUIRED_FILES",
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "expected": "ANALYSIS_COMPLETE_AWAITING_VERIFICATION",
+      "gate_id": "V02_MANIFEST_STATUS",
+      "observed": "ANALYSIS_COMPLETE_AWAITING_VERIFICATION",
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "expected": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0",
+      "gate_id": "V03_CODE_HASH",
+      "observed": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0",
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "expected": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
+      "gate_id": "V04_PANEL_HASH",
+      "observed": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "expected": "freeze and protocol before manifest",
+      "gate_id": "V05_FREEZE_ORDER",
+      "observed": {
+        "freeze_mtime": 1786767358.4684453,
+        "manifest_mtime": 1786768473.6060145,
+        "protocol_mtime": 1786767358.4681199
+      },
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/logs/P2a_M1/20260815T042826Z_c2ac8933",
+      "expected": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py\n83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv\n56f7e95f3d39097dc21620c9975f60821b33ac062c15d8be03e8934e32ddce51  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/standardized_tau_models.csv\ncd7de1cc43040ec756e80589c61a940dfccc23cf9e31851c04d87b5ab96f828f  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/specificity_interaction.csv\n",
+      "gate_id": "V06_HISTORICAL_UNCHANGED",
+      "observed": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py\n83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv\n56f7e95f3d39097dc21620c9975f60821b33ac062c15d8be03e8934e32ddce51  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/standardized_tau_models.csv\ncd7de1cc43040ec756e80589c61a940dfccc23cf9e31851c04d87b5ab96f828f  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/specificity_interaction.csv\n",
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933;/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/logs/P2a_M1/20260815T042826Z_c2ac8933",
+      "expected": [],
+      "gate_id": "V07_NO_SYMLINKS",
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/input_audit.json",
+      "expected": "canonical 288x32 shared-support contract",
+      "gate_id": "V08_INPUT_CONTRACT",
+      "observed": {
+        "duplicate_keys": 0,
+        "input_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
+        "input_sha256": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
+        "missingness": {
+          "log1p_chlorophyll_a_mean": 0,
+          "log1p_harmful_cyanobacteria_total_mean": 0,
+          "tau_days": 0,
+          "weir_name": 0,
+          "year": 0
+        },
+        "n_weirs": 16,
+        "n_years": 9,
+        "nonfinite": {
+          "log1p_chlorophyll_a_mean": 0,
+          "log1p_harmful_cyanobacteria_total_mean": 0,
+          "tau_days": 0,
+          "year": 0
+        },
+        "required_columns": [
+          "tau_days",
+          "weir_name",
+          "year",
+          "log1p_harmful_cyanobacteria_total_mean",
+          "log1p_chlorophyll_a_mean"
+        ],
+        "season_counts": {
+          "annual_all_samples": 144,
+          "bloom_season_06_10": 144
+        },
+        "shape": [
+          288,
+          32
+        ],
+        "shared_support_counts": {
+          "annual_all_samples": 144,
+          "bloom_season_06_10": 144
+        },
+        "tau_nonpositive": 0,
+        "year_range": [
+          2017,
+          2025
+        ],
+        "zscore_metadata": {
+          "annual_all_samples": {
+            "log1p_chlorophyll_a_mean": {
+              "mean": 3.1477119878978104,
+              "sd_ddof1": 0.566137030268458
+            },
+            "log1p_harmful_cyanobacteria_total_mean": {
+              "mean": 6.399385533770312,
+              "sd_ddof1": 3.1140466404656912
+            }
+          },
+          "bloom_season_06_10": {
+            "log1p_chlorophyll_a_mean": {
+              "mean": 3.2259759791479676,
+              "sd_ddof1": 0.6048087814669391
+            },
+            "log1p_harmful_cyanobacteria_total_mean": {
+              "mean": 7.030262142062232,
+              "sd_ddof1": 3.3892208511916846
+            }
+          }
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy",
+      "expected": {
+        "interactions": {
+          "annual_all_samples": [
+            0.887440253669714,
+            0.1792907058011252
+          ],
+          "bloom_season_06_10": [
+            1.0350637385933135,
+            0.15187298089532514
+          ]
+        },
+        "slopes": {
+          "annual_all_samples:chlorophyll_a": 0.14757774021651276,
+          "annual_all_samples:cyano": 0.6874057079174496,
+          "bloom_season_06_10:chlorophyll_a": 0.3216193241323556,
+          "bloom_season_06_10:cyano": 0.6186412520414742
+        }
+      },
+      "gate_id": "V09_LEGACY_NUMERIC",
+      "observed": {
+        "annual_all_samples:chlorophyll_a": 0.1475777402165127,
+        "annual_all_samples:cyano": 0.6874057079174496,
+        "annual_all_samples:interaction": 0.887440253669714,
+        "annual_all_samples:interaction_se": 0.1792907058011252,
+        "bloom_season_06_10:chlorophyll_a": 0.3216193241323556,
+        "bloom_season_06_10:cyano": 0.6186412520414742,
+        "bloom_season_06_10:interaction": 1.0350637385933137,
+        "bloom_season_06_10:interaction_se": 0.1518729808953251
+      },
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy_cluster_se_defect_audit.json",
+      "expected": "Bloom legacy grouper has 0 aligned groups; index repair restores 16 positive-SE groups with unchanged coefficients",
+      "gate_id": "V09B_LEGACY_CLUSTER_SE_DEFECT",
+      "observed": {
+        "audit_id": "P2a_legacy_cluster_se_index_alignment",
+        "audited_at_utc": "2026-08-15T04:35:37.343728+00:00",
+        "groupby_expression": "pd.Series(np.arange(len(clusters))).groupby(clusters.astype(str)).groups",
+        "interpretation": "Resetting the analysis-frame index restores 16 groups and positive Bloom clustered SEs without changing coefficients. This is an E4 legacy uncertainty-code defect, not an explanation for the common-FE versus endpoint-specific coefficient gap.",
+        "records": [
+          {
+            "beta_abs_difference": 0.0,
+            "beta_index_repaired": 0.6874057079174496,
+            "beta_legacy": 0.6874057079174496,
+            "cluster_se_index_repaired": 0.10993063831803682,
+            "cluster_se_legacy": 0.10993063831803682,
+            "legacy_group_count": 16,
+            "n": 144,
+            "original_index_max": 143,
+            "original_index_min": 0,
+            "outcome": "cyano",
+            "reset_group_count": 16,
+            "season_scope": "annual_all_samples"
+          },
+          {
+            "beta_abs_difference": 0.0,
+            "beta_index_repaired": 0.14757774021651276,
+            "beta_legacy": 0.14757774021651276,
+            "cluster_se_index_repaired": 0.20379604413696079,
+            "cluster_se_legacy": 0.20379604413696079,
+            "legacy_group_count": 16,
+            "n": 144,
+            "original_index_max": 143,
+            "original_index_min": 0,
+            "outcome": "chlorophyll_a",
+            "reset_group_count": 16,
+            "season_scope": "annual_all_samples"
+          },
+          {
+            "beta_abs_difference": 0.0,
+            "beta_index_repaired": 0.6186412520414742,
+            "beta_legacy": 0.6186412520414742,
+            "cluster_se_index_repaired": 0.11189926734853534,
+            "cluster_se_legacy": 0.0,
+            "legacy_group_count": 0,
+            "n": 144,
+            "original_index_max": 287,
+            "original_index_min": 144,
+            "outcome": "cyano",
+            "reset_group_count": 16,
+            "season_scope": "bloom_season_06_10"
+          },
+          {
+            "beta_abs_difference": 0.0,
+            "beta_index_repaired": 0.3216193241323556,
+            "beta_legacy": 0.3216193241323556,
+            "cluster_se_index_repaired": 0.20681814826469763,
+            "cluster_se_legacy": 0.0,
+            "legacy_group_count": 0,
+            "n": 144,
+            "original_index_max": 287,
+            "original_index_min": 144,
+            "outcome": "chlorophyll_a",
+            "reset_group_count": 16,
+            "season_scope": "bloom_season_06_10"
+          }
+        ],
+        "root_cause": "cluster_se groups a RangeIndex Series by a caller-indexed clusters Series; pandas aligns the external grouper on labels. Bloom rows retain labels 144..287 while the grouped Series has labels 0..143, producing zero groups and a zero meat matrix.",
+        "scope": "Frozen legacy per-endpoint clustered uncertainty only; no historical file was modified.",
+        "status": "CONFIRMED"
+      },
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/endpoint_specific_contrasts.csv",
+      "expected": "2 finite algebraically equal contrasts",
+      "gate_id": "V10_ENDPOINT_CONTRAST",
+      "observed": [
+        {
+          "arithmetic_difference": 0.5398279677009368,
+          "beta_chlorophyll": 0.1475777402165127,
+          "beta_cyano": 0.6874057079174496,
+          "cr1_ci_high": 0.9938157530505762,
+          "cr1_ci_low": 0.0858401823512987,
+          "cr1_df": 15,
+          "cr1_p_two_sided": 0.0228917990111893,
+          "cr1_se_unified": 0.2129948542743522,
+          "cr1_t": 2.5344648326837107,
+          "delta_endpoint_specific_stacked": 0.5398279677009374,
+          "equality_residual": 6.661338147750939e-16,
+          "forbidden_independent_se_diagnostic": 0.2315546865146226,
+          "inference_status": "positive_and_holm_supported",
+          "n_original": 144,
+          "n_stacked": 288,
+          "n_weirs": 16,
+          "n_years": 9,
+          "paired_bootstrap_ci_high": 0.9223702608560678,
+          "paired_bootstrap_ci_low": 0.1650866395325693,
+          "paired_bootstrap_draws": 9999,
+          "protocol_id": "P2a_M1_v1",
+          "run_id": "20260815T042826Z_c2ac8933",
+          "season_role": "primary_confirmatory",
+          "season_scope": "annual_all_samples",
+          "wcr_p_holm": 0.025970458984375,
+          "wcr_p_two_sided": 0.0129852294921875,
+          "wcr_patterns": 65536
+        },
+        {
+          "arithmetic_difference": 0.2970219279091186,
+          "beta_chlorophyll": 0.3216193241323556,
+          "beta_cyano": 0.6186412520414742,
+          "cr1_ci_high": 0.7983887780852359,
+          "cr1_ci_low": -0.2043449222670013,
+          "cr1_df": 15,
+          "cr1_p_two_sided": 0.2259665966842782,
+          "cr1_se_unified": 0.2352234193019315,
+          "cr1_t": 1.262722601306384,
+          "delta_endpoint_specific_stacked": 0.2970219279091172,
+          "equality_residual": -1.3877787807814457e-15,
+          "forbidden_independent_se_diagnostic": 0.2351492982868065,
+          "inference_status": "positive_but_not_holm_supported",
+          "n_original": 144,
+          "n_stacked": 288,
+          "n_weirs": 16,
+          "n_years": 9,
+          "paired_bootstrap_ci_high": 0.7542461260393246,
+          "paired_bootstrap_ci_low": -0.1483312759424832,
+          "paired_bootstrap_draws": 9999,
+          "protocol_id": "P2a_M1_v1",
+          "run_id": "20260815T042826Z_c2ac8933",
+          "season_role": "secondary_prespecified",
+          "season_scope": "bloom_season_06_10",
+          "wcr_p_holm": 0.2067108154296875,
+          "wcr_p_two_sided": 0.2067108154296875,
+          "wcr_patterns": 65536
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/wcr_signflip_t.csv.gz",
+      "expected": {
+        "annual_all_samples": 65536,
+        "bloom_season_06_10": 65536
+      },
+      "gate_id": "V11_WCR_COMPLETE",
+      "observed": {
+        "counts": {
+          "annual_all_samples": 65536,
+          "bloom_season_06_10": 65536
+        },
+        "finite": true,
+        "unique": {
+          "annual_all_samples": 65536,
+          "bloom_season_06_10": 65536
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/cluster_pairs_bootstrap.csv.gz",
+      "expected": {
+        "annual_all_samples": 9999,
+        "bloom_season_06_10": 9999
+      },
+      "gate_id": "V12_BOOTSTRAP_COMPLETE",
+      "observed": {
+        "counts": {
+          "annual_all_samples": 9999,
+          "bloom_season_06_10": 9999
+        },
+        "finite": true,
+        "unique": {
+          "annual_all_samples": 9999,
+          "bloom_season_06_10": 9999
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/specification_matrix.csv",
+      "expected": [
+        "legacy_common_fe_stacked",
+        "legacy_separate_chlorophyll",
+        "legacy_separate_cyano",
+        "paired_separate_joint_contrast",
+        "primary_endpoint_specific_fe_stacked"
+      ],
+      "gate_id": "V13_SPECIFICATION_MATRIX",
+      "observed": {
+        "annual_all_samples": [
+          "legacy_common_fe_stacked",
+          "legacy_separate_chlorophyll",
+          "legacy_separate_cyano",
+          "paired_separate_joint_contrast",
+          "primary_endpoint_specific_fe_stacked"
+        ],
+        "bloom_season_06_10": [
+          "legacy_common_fe_stacked",
+          "legacy_separate_chlorophyll",
+          "legacy_separate_cyano",
+          "paired_separate_joint_contrast",
+          "primary_endpoint_specific_fe_stacked"
+        ]
+      },
+      "status": "PASS"
+    }
+  ],
+  "run_id": "20260815T042826Z_c2ac8933",
+  "status": "PASS",
+  "verified_at_utc": "2026-08-15T04:36:23.210910+00:00"
+}

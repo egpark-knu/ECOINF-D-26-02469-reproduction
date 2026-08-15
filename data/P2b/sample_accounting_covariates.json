@@ -1,0 +1,172 @@
+[
+  {
+    "step": "hydrology_loaded",
+    "rows": 854604,
+    "weirs": 16,
+    "years": [
+      2017,
+      2025
+    ]
+  },
+  {
+    "step": "hydrology_filtered",
+    "rows": 262957,
+    "nonnumeric": 0
+  },
+  {
+    "step": "hydrology_pivoted",
+    "weir_days": 52592,
+    "expected": 52592
+  },
+  {
+    "step": "hydro_agg_annual_all_samples",
+    "rows": 144,
+    "n_days_min": 365,
+    "n_days_max": 366,
+    "zero_pos_days": 0
+  },
+  {
+    "step": "temp_rows_annual_all_samples",
+    "rows": 6752,
+    "nonnumeric": 0
+  },
+  {
+    "step": "temp_agg_annual_all_samples",
+    "weir_years": 144,
+    "total_obs": 6752
+  },
+  {
+    "step": "panel_rows_annual_all_samples",
+    "rows": 144
+  },
+  {
+    "step": "join_hydro_annual_all_samples",
+    "rows": 144,
+    "matched": 144,
+    "unmatched": 0
+  },
+  {
+    "step": "join_temp_annual_all_samples",
+    "rows": 144,
+    "matched": 144,
+    "unmatched": 0
+  },
+  {
+    "step": "missing_annual_all_samples_storage_mcm",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_annual_all_samples_discharge_cms",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_annual_all_samples_water_level_m",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_annual_all_samples_rainfall_mm",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_annual_all_samples_water_temp_c",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_annual_all_samples_inflow_cms",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "hydro_agg_bloom_season_06_10",
+    "rows": 144,
+    "n_days_min": 153,
+    "n_days_max": 153,
+    "zero_pos_days": 0
+  },
+  {
+    "step": "temp_rows_bloom_season_06_10",
+    "rows": 6752,
+    "nonnumeric": 0
+  },
+  {
+    "step": "temp_agg_bloom_season_06_10",
+    "weir_years": 144,
+    "total_obs": 2924
+  },
+  {
+    "step": "panel_rows_bloom_season_06_10",
+    "rows": 144
+  },
+  {
+    "step": "join_hydro_bloom_season_06_10",
+    "rows": 144,
+    "matched": 144,
+    "unmatched": 0
+  },
+  {
+    "step": "join_temp_bloom_season_06_10",
+    "rows": 144,
+    "matched": 144,
+    "unmatched": 0
+  },
+  {
+    "step": "missing_bloom_season_06_10_storage_mcm",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_bloom_season_06_10_discharge_cms",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_bloom_season_06_10_water_level_m",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_bloom_season_06_10_rainfall_mm",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_bloom_season_06_10_water_temp_c",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "missing_bloom_season_06_10_inflow_cms",
+    "missing": 0,
+    "n": 144
+  },
+  {
+    "step": "covariate_panel_written",
+    "rows": 288,
+    "cols": 24
+  },
+  {
+    "step": "tau_reproduction_annual",
+    "n": 144,
+    "max_abs_err": 5.277204482956321e-06,
+    "median_abs_err": 1.1390811864853134e-06,
+    "max_rel_err": 3.7059603221241048e-06,
+    "corr": 0.9999999999993581
+  },
+  {
+    "step": "tau_bloom_vs_submitted_annual",
+    "n": 144,
+    "max_abs_diff": 4.063674746325487,
+    "corr": 0.9835205732791918
+  },
+  {
+    "step": "collinearity_annual",
+    "corr_tau_logdisch": -0.3041317844286984,
+    "corr_tau_logstor": 0.7706089672053478,
+    "corr_logstor_logdisch": 0.3289739762727269
+  }
+]

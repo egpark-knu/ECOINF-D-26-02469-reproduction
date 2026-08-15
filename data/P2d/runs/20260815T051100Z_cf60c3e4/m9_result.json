@@ -1,0 +1,95 @@
+{
+  "primary_bootstrap": {
+    "reason": "A paired bootstrap cannot be formed because the frozen primary occurrence model halted.",
+    "requested_draws": 1999,
+    "saved_draws": 0,
+    "status": "NOT_RUN_PRIMARY_MODEL_HALTED"
+  },
+  "primary_models": [
+    {
+      "calendar_balanced": false,
+      "ci_high": NaN,
+      "ci_low": NaN,
+      "cluster_se": NaN,
+      "coefficient_log2_tau": NaN,
+      "converged": false,
+      "effect_percent_per_tau_doubling": NaN,
+      "effect_ratio_per_tau_doubling": NaN,
+      "error_message": "logit failed to converge",
+      "error_type": "ValueError",
+      "iterations": NaN,
+      "model_status": "HALTED",
+      "n": 2917,
+      "n_weirs": 16,
+      "p_holm_primary_family": NaN,
+      "p_two_sided": NaN,
+      "part": "occurrence",
+      "window": "primary_june_october"
+    },
+    {
+      "calendar_balanced": false,
+      "ci_high": 0.563008203821684,
+      "ci_low": -0.011822794059273112,
+      "cluster_se": 0.13484508678106924,
+      "coefficient_log2_tau": 0.27559270488120546,
+      "converged": true,
+      "effect_percent_per_tau_doubling": 31.73112203185713,
+      "effect_ratio_per_tau_doubling": 1.3173112203185713,
+      "error_message": "",
+      "error_type": "",
+      "iterations": 1.0,
+      "model_status": "FIT",
+      "n": 2090,
+      "n_weirs": 16,
+      "p_holm_primary_family": NaN,
+      "p_two_sided": 0.05894885674089103,
+      "part": "positive",
+      "window": "primary_june_october"
+    }
+  ],
+  "sample_accounting": {
+    "duplicate_measurement_keys": 3,
+    "eligible_rows": 6743,
+    "exact_duplicate_rows_collapsed": 3,
+    "excluded_after_exact_dedup_for_missing_or_join": 2,
+    "harmful_total_rows": 6748,
+    "missing_value": 2,
+    "n_weirs": 16,
+    "positives": 3309,
+    "raw_total_rows": 26868,
+    "source_units": [
+      "Cells/100mL"
+    ],
+    "year_max": 2025,
+    "year_min": 2017,
+    "zeros": 3434
+  },
+  "sampling_frequency": {
+    "weir_year_cv": 0.16407012535025678,
+    "weir_year_max": 66,
+    "weir_year_min": 21,
+    "weir_year_month_cv": 0.26996654863113523,
+    "weir_year_month_max": 9,
+    "weir_year_month_min": 1
+  },
+  "sampling_protocol_branch": {
+    "event_triggered_sampling_determined": false,
+    "inference_forbidden": "Unequal observed frequency cannot identify the agency scheduling protocol.",
+    "ledger_id": "R2-m04b",
+    "notes_nonempty_rows": 0,
+    "reason": "Timestamps and panel notes describe observations/provenance but do not state whether agency sampling was routine or bloom-event-triggered.",
+    "status": "AXIS_EXHAUSTED"
+  },
+  "threshold_branch": {
+    "conversion_applied": false,
+    "evidence_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/insitu_reversal/alert_exceedance_as_reported_screen.csv",
+    "evidence_sha256": "5ff9c6dfa8a0328d3e8df8bba637d933917b67c2c27d2f9b1f87677f37591a4c",
+    "ledger_id": "R2-M09c",
+    "reason": "No authoritative in-scope unit reconciliation; exceedance was not analyzed.",
+    "source_unit": "Cells/100mL",
+    "status": "BLOCKED",
+    "threshold_language_unit": "cells/mL"
+  },
+  "verdict": "AXIS_EXHAUSTED",
+  "verdict_reason": "Frozen primary model(s) halted and cannot be replaced post hoc: occurrence"
+}
