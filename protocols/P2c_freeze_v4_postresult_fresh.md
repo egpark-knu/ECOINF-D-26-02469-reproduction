@@ -1,9 +1,9 @@
 # P2c v4 post-result fresh implementation freeze
 
 - Protocol ID: `P2c_v4_postresult_fresh_20260815`
-- Worker turn: `T1_codex1_c0ae47`
+- Original execution identifier: `[sanitized for public release]`
 - Frozen at UTC: `2026-08-15T05:37:34Z`
-- Runtime: `/Users/eungyupark/anaconda3/envs/mas/bin/python3.12`
+- Runtime: `python3`
 - Random seed: `20260815`
 - Paired weir bootstrap draws: `3000`
 - Status: **post-result exploratory corrective analysis; not confirmatory validation**
@@ -13,7 +13,7 @@
 
 ## Steering recorded before v4 result generation
 
-At `2026-08-15T05:35:33Z` (`2026-08-15T14:35:33+0900`), codex-0 replaced the
+At `2026-08-15T05:35:33Z` (`2026-08-15T14:35:33+0900`), the pre-release audit replaced the
 v4 task packet before any v4 output existed. The current packet removes invalid
 v2 numerical anti-fabrication expectations after independent inspection showed
 that the v2 matchup code mixed unrelated raw variables into both endpoint values.
@@ -215,7 +215,7 @@ with reflectance scale 0.0001.
 The source manifest records relative/logical source paths, SHA-256, size, mtime,
 runtime/package versions, the documented relative clean command, seed/draw count,
 and this freeze's hash/mtime. Submission-facing CSVs, reports, and map metadata must
-contain no `/Users/`, project/account identifier, credential/secret, MAS2 workspace
+contain no machine-local home path, project/account identifier, authentication material, or private orchestration workspace
 path, or internal orchestration marker.
 
 The verifier halts on any source/freeze hash drift; missing schema; duplicate or

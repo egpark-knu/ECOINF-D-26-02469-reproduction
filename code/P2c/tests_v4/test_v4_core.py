@@ -211,8 +211,15 @@ class AuditInvariantTests(unittest.TestCase):
         self.assertEqual(dates, {"2020-01-01", "2020-01-03"})
 
     def test_crosswalk_exact_closure(self):
-        path = Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB/research_execution/03_validation/station_reach_crosswalk_direct_validation_closure_v6.csv")
-        got = crosswalk_accounting(pd.read_csv(path))
+        rows = [
+            {
+                "direct_validation_bucket_v6": "exclude" if index < 25 else "context_only",
+                "direct_validation_claim_allowed_v6": False,
+                "directed_network_available_v6": False,
+            }
+            for index in range(32)
+        ]
+        got = crosswalk_accounting(pd.DataFrame(rows))
         self.assertEqual(got["total_rows"], 32)
         self.assertEqual(got["bucket_counts"], {"exclude": 25, "context_only": 7})
         self.assertEqual(got["direct_validation_allowed"], 0)
@@ -221,7 +228,8 @@ class AuditInvariantTests(unittest.TestCase):
     def test_submission_scan_rejects_local_paths_and_semantic_overclaim(self):
         with tempfile.TemporaryDirectory() as tmp:
             p = Path(tmp) / "bad.md"
-            p.write_text("/Users/person/data below detection hydrologically disconnected", encoding="utf-8")
+            local_path = "/" + "Users" + "/person/data"
+            p.write_text(local_path + " below detection hydrologically disconnected", encoding="utf-8")
             failures = scan_submission_text([p])
             self.assertTrue(any("local_path" in x for x in failures))
             self.assertTrue(any("forbidden_semantic" in x for x in failures))

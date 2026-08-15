@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import importlib.metadata
 import json
+import os
 import platform
 import sys
 from pathlib import Path
@@ -66,15 +67,16 @@ def sha256(path: Path) -> str:
 
 
 def source_paths() -> dict[str, tuple[str, Path]]:
-    code = Path(__file__).resolve()
-    revision = code.parents[3]
-    hab = code.parents[4]
-    project = Path.home() / "mas2-project"
-    packet = project / "workspace/source-packets/ECOINF_revision1_20260815"
+    public_root = Path(__file__).resolve().parents[2]
+    source_root = Path(os.environ.get("P2C_SOURCE_ROOT", str(public_root / "raw")))
+    revision = Path(os.environ.get("P2C_REVISION_ROOT", str(source_root / "revision")))
+    packet = Path(os.environ.get("P2C_PACKET_ROOT", str(source_root / "source_packets")))
+    auxiliary = Path(os.environ.get("P2C_AUXILIARY_ROOT", str(source_root / "auxiliary")))
+    hab = source_root
     return {
         "v4_task_packet": ("source_packet/P2c_v4_fresh_implementation_packet.md", packet / "P2c_v4_fresh_implementation_packet.md"),
         "v3_design_packet": ("source_packet/P2c_v3_execution_packet.md", packet / "P2c_v3_execution_packet.md"),
-        "debate": ("source_packet/P2c_stuck_debate.json", project / "workspace/execution_ECOINF_revision1_P2c_stuck_debate_20260815.json"),
+        "debate": ("source_packet/P2c_stuck_debate.json", packet / "P2c_stuck_debate.json"),
         "rejected_v3_audit": ("99_admin/reports/P2c_v3_AGY1_REJECTED.md", revision / "99_admin/reports/P2c_v3_AGY1_REJECTED.md"),
         "reviewer_comments": ("00_decision/reviewer_comments_verbatim.md", revision / "00_decision/reviewer_comments_verbatim.md"),
         "comment_ledger": ("01_intake/comment_ledger.csv", revision / "01_intake/comment_ledger.csv"),
@@ -90,7 +92,7 @@ def source_paths() -> dict[str, tuple[str, Path]]:
         "controls": ("source_data/control_reaches.json", hab / "control_reaches.json"),
         "hydrorivers": ("source_data/hydrorivers_korea_mainstems.json", hab / "revision/figures/data/hydrorivers_korea_mainstems_12625_12915_3470_3800.json"),
         "natural_earth": ("source_data/ne_10m_admin_0_countries.geojson", hab / "revision/figures/data/ne_10m_admin_0_countries.geojson"),
-        "hydrorivers_documentation": ("source_data/HydroRIVERS_TechDoc_v10.pdf", project / "workspace/external_data/hydrorivers/HydroRIVERS_TechDoc_v10.pdf"),
+        "hydrorivers_documentation": ("source_data/HydroRIVERS_TechDoc_v10.pdf", auxiliary / "hydrorivers/HydroRIVERS_TechDoc_v10.pdf"),
         "freeze": ("03_analysis/frozen_protocols/P2c_freeze_v4_postresult_fresh.md", revision / "03_analysis/frozen_protocols/P2c_freeze_v4_postresult_fresh.md"),
     }
 

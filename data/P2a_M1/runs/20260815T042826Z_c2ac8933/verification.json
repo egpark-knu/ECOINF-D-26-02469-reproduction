@@ -1,35 +1,35 @@
 {
   "gates": [
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933",
       "expected": [],
       "gate_id": "V01_REQUIRED_FILES",
       "observed": [],
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
       "expected": "ANALYSIS_COMPLETE_AWAITING_VERIFICATION",
       "gate_id": "V02_MANIFEST_STATUS",
       "observed": "ANALYSIS_COMPLETE_AWAITING_VERIFICATION",
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
       "expected": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0",
       "gate_id": "V03_CODE_HASH",
       "observed": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0",
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
       "expected": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
       "gate_id": "V04_PANEL_HASH",
       "observed": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/run_manifest.json",
       "expected": "freeze and protocol before manifest",
       "gate_id": "V05_FREEZE_ORDER",
       "observed": {
@@ -40,26 +40,26 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/logs/P2a_M1/20260815T042826Z_c2ac8933",
-      "expected": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py\n83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv\n56f7e95f3d39097dc21620c9975f60821b33ac062c15d8be03e8934e32ddce51  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/standardized_tau_models.csv\ncd7de1cc43040ec756e80589c61a940dfccc23cf9e31851c04d87b5ab96f828f  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/specificity_interaction.csv\n",
+      "evidence": "source-root/revision_1/03_analysis/logs/P2a_M1/20260815T042826Z_c2ac8933",
+      "expected": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0  source-root/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py\n83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7  source-root/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv\n56f7e95f3d39097dc21620c9975f60821b33ac062c15d8be03e8934e32ddce51  source-root/manuscript_EI_hardening/01_models/standardized_tau_models.csv\ncd7de1cc43040ec756e80589c61a940dfccc23cf9e31851c04d87b5ab96f828f  source-root/manuscript_EI_hardening/01_models/specificity_interaction.csv\n",
       "gate_id": "V06_HISTORICAL_UNCHANGED",
-      "observed": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py\n83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv\n56f7e95f3d39097dc21620c9975f60821b33ac062c15d8be03e8934e32ddce51  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/standardized_tau_models.csv\ncd7de1cc43040ec756e80589c61a940dfccc23cf9e31851c04d87b5ab96f828f  /Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/specificity_interaction.csv\n",
+      "observed": "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0  source-root/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py\n83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7  source-root/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv\n56f7e95f3d39097dc21620c9975f60821b33ac062c15d8be03e8934e32ddce51  source-root/manuscript_EI_hardening/01_models/standardized_tau_models.csv\ncd7de1cc43040ec756e80589c61a940dfccc23cf9e31851c04d87b5ab96f828f  source-root/manuscript_EI_hardening/01_models/specificity_interaction.csv\n",
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933;/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/logs/P2a_M1/20260815T042826Z_c2ac8933",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933;source-root/revision_1/03_analysis/logs/P2a_M1/20260815T042826Z_c2ac8933",
       "expected": [],
       "gate_id": "V07_NO_SYMLINKS",
       "observed": [],
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/input_audit.json",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/input_audit.json",
       "expected": "canonical 288x32 shared-support contract",
       "gate_id": "V08_INPUT_CONTRACT",
       "observed": {
         "duplicate_keys": 0,
-        "input_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
+        "input_path": "source-root/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
         "input_sha256": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
         "missingness": {
           "log1p_chlorophyll_a_mean": 0,
@@ -126,7 +126,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy",
       "expected": {
         "interactions": {
           "annual_all_samples": [
@@ -159,7 +159,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy_cluster_se_defect_audit.json",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy_cluster_se_defect_audit.json",
       "expected": "Bloom legacy grouper has 0 aligned groups; index repair restores 16 positive-SE groups with unchanged coefficients",
       "gate_id": "V09B_LEGACY_CLUSTER_SE_DEFECT",
       "observed": {
@@ -232,7 +232,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/endpoint_specific_contrasts.csv",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/endpoint_specific_contrasts.csv",
       "expected": "2 finite algebraically equal contrasts",
       "gate_id": "V10_ENDPOINT_CONTRAST",
       "observed": [
@@ -298,7 +298,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/wcr_signflip_t.csv.gz",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/wcr_signflip_t.csv.gz",
       "expected": {
         "annual_all_samples": 65536,
         "bloom_season_06_10": 65536
@@ -318,7 +318,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/cluster_pairs_bootstrap.csv.gz",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/cluster_pairs_bootstrap.csv.gz",
       "expected": {
         "annual_all_samples": 9999,
         "bloom_season_06_10": 9999
@@ -338,7 +338,7 @@
       "status": "PASS"
     },
     {
-      "evidence": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/specification_matrix.csv",
+      "evidence": "source-root/revision_1/03_analysis/output/P2a_M1/runs/20260815T042826Z_c2ac8933/specification_matrix.csv",
       "expected": [
         "legacy_common_fe_stacked",
         "legacy_separate_chlorophyll",

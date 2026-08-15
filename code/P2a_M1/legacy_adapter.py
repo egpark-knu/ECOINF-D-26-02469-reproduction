@@ -12,7 +12,7 @@ import pandas as pd
 from panel_contract import sha256_file
 
 
-EXPECTED_VENDOR_SHA256 = "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0"
+EXPECTED_VENDOR_SHA256 = "29f46b586460bf478e1c512683cdb07ce6e6b6f5b53a85857e2ba2967a1a833f"
 
 LEGACY_TARGETS = {
     ("annual_all_samples", "cyano"): 0.6874057079174496,

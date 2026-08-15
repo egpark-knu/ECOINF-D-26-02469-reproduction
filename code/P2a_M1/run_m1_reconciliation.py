@@ -30,22 +30,26 @@ from legacy_adapter import assert_legacy_regression, run_legacy
 from panel_contract import sha256_file, validate_new_root, validate_panel
 
 
-CAMPAIGN = Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1")
-OUTPUT_PARENT = CAMPAIGN / "03_analysis/output/P2a_M1/runs"
-LOG_PARENT = CAMPAIGN / "03_analysis/logs/P2a_M1"
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_PARENT = Path(os.environ.get(
+    "P2A_OUTPUT_PARENT", str(REPOSITORY_ROOT / "reproduction_output/P2a_M1/runs")
+))
+LOG_PARENT = Path(os.environ.get(
+    "P2A_LOG_PARENT", str(REPOSITORY_ROOT / "reproduction_output/P2a_M1/logs")
+))
 SEASONS = ["annual_all_samples", "bloom_season_06_10"]
 SEASON_ROLES = {
     "annual_all_samples": "primary_confirmatory",
     "bloom_season_06_10": "secondary_prespecified",
 }
 HISTORICAL_PATHS = [
-    Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/hardening_specificity_analysis.py"),
-    Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv"),
-    Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/standardized_tau_models.csv"),
-    Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/01_models/specificity_interaction.csv"),
+    REPOSITORY_ROOT / "code/P2a_M1/vendor/hardening_specificity_analysis__c895385a.py",
+    REPOSITORY_ROOT / "data/insitu_annual_analysis_panel.csv",
+    REPOSITORY_ROOT / "data/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy/standardized_tau_models.csv",
+    REPOSITORY_ROOT / "data/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy/specificity_interaction.csv",
 ]
-EXPECTED_CODE_SHA256 = "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0"
-EXPECTED_PANEL_SHA256 = "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7"
+EXPECTED_CODE_SHA256 = "29f46b586460bf478e1c512683cdb07ce6e6b6f5b53a85857e2ba2967a1a833f"
+EXPECTED_PANEL_SHA256 = "c7c709986648dde52930da3feedba7deb27a5e347490ea31d87272936f1d68ff"
 
 
 def utc_now() -> str:
@@ -213,7 +217,7 @@ def execute(args: argparse.Namespace) -> None:
         "run_id": run_root.name,
         "status": "RUNNING",
         "started_at_utc": start_dt.isoformat(),
-        "worker_turn": "T1_codex1_2a8433",
+        "execution_origin": "public_reproduction",
         "command_arguments": {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()},
         "paths": {"run_root": str(run_root), "log_root": str(log_root)},
         "hashes": {

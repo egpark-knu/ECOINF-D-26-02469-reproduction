@@ -82,7 +82,7 @@
   },
   "threshold_branch": {
     "conversion_applied": false,
-    "evidence_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/insitu_reversal/alert_exceedance_as_reported_screen.csv",
+    "evidence_path": "source-root/Round_6/02_analysis/insitu_reversal/alert_exceedance_as_reported_screen.csv",
     "evidence_sha256": "5ff9c6dfa8a0328d3e8df8bba637d933917b67c2c27d2f9b1f87677f37591a4c",
     "ledger_id": "R2-M09c",
     "reason": "No authoritative in-scope unit reconciliation; exceedance was not analyzed.",

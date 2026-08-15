@@ -14,7 +14,7 @@ alternative specification (§9).
 
 | Item | Value |
 |---|---|
-| Interpreter | `/Users/eungyupark/anaconda3/envs/mas/bin/python3` — CPython 3.12.13 |
+| Interpreter | `python3` — CPython 3.12.13 |
 | numpy | 2.4.4 |
 | pandas | 2.3.3 |
 | scipy | 1.17.1 |
@@ -26,7 +26,7 @@ No package is installed or upgraded for this run.
 
 ## 2. Frozen inputs and SHA-256
 
-Paths are relative to `/Users/eungyupark/Dropbox/Manuscripts/0_HAB/`.
+Paths are relative to `source-root/`.
 
 | SHA-256 | Path | Role |
 |---|---|---|

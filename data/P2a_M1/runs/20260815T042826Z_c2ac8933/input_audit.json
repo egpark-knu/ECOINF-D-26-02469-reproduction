@@ -1,6 +1,6 @@
 {
   "duplicate_keys": 0,
-  "input_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
+  "input_path": "source-root/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv",
   "input_sha256": "83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7",
   "missingness": {
     "log1p_chlorophyll_a_mean": 0,

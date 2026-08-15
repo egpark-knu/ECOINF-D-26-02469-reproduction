@@ -1,7 +1,7 @@
 # M1 Freeze — P2a residence-time reconciliation
 
 - Protocol ID: `P2a_M1_v1`
-- Worker turn: `T1_codex1_2a8433`
+- Original execution identifier: `[sanitized for public release]`
 - Freeze rule: this file and `M1_protocol_v1.json` were written before any new endpoint-specific result was computed.
 - Historical values were already visible in the submitted artifacts; the freeze protects choices for the new comparison and inference.
 

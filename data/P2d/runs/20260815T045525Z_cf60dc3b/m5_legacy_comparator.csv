@@ -1,5 +1,0 @@
-season_scope,outcome,n_treated_weirs,n_comparison_or_unresolved_weirs,did_2018_vs_2017_recomputed,did_late_2019_2025_vs_2017,role,did_2018_vs_2017_historical,did_late_post_vs_2017,immediate_abs_diff,late_abs_diff
-annual_all_samples,log1p_harmful_cyanobacteria_total_mean,5,11,-0.7427064087378277,-1.4792636280190603,legacy_cross_basin_comparator_not_event_study,-0.7427064087378277,-1.4792636280190603,0.0,0.0
-annual_all_samples,log1p_chlorophyll_a_mean,5,11,-0.20990860769477715,-0.2481180603266555,legacy_cross_basin_comparator_not_event_study,-0.2099086076947771,-0.2481180603266555,5.551115123125783e-17,0.0
-bloom_season_06_10,log1p_harmful_cyanobacteria_total_mean,5,11,-1.0981925924391058,-1.611554974478345,legacy_cross_basin_comparator_not_event_study,-1.0981925924391058,-1.611554974478345,0.0,0.0
-bloom_season_06_10,log1p_chlorophyll_a_mean,5,11,0.29642459709736135,-0.014804687626631896,legacy_cross_basin_comparator_not_event_study,0.2964245970973613,-0.0148046876266318,5.551115123125783e-17,9.540979117872439e-17

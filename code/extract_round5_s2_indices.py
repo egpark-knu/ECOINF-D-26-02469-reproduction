@@ -28,10 +28,9 @@ LOG = BASE / "output" / "log"
 WEIR_FILE = BASE / "data" / "weir_inventory.json"
 CONTROL_FILE = BASE / "data" / "control_reaches.json"
 
-SERVICE_ACCOUNT = os.environ.get("GEE_SERVICE_ACCOUNT", "YOUR_SERVICE_ACCOUNT_HERE")
-KEY_PATH = os.environ.get("GEE_KEY_PATH", "path/to/key.json")
-GEE_PROJECT = "mas-workspace"
-FALLBACK_GEE_PROJECT = "mas-gmail-agent"
+SERVICE_ACCOUNT = os.environ.get("GEE_SERVICE_ACCOUNT")
+KEY_PATH = os.environ.get("GEE_KEY_PATH")
+GEE_PROJECT = os.environ.get("GEE_PROJECT")
 
 YEARS = list(range(2017, 2026))
 BLOOM_START = "-05-01"
@@ -51,13 +50,20 @@ EXCEEDANCE_DECISIVE = False
 
 
 def init_gee() -> None:
-    if Path(KEY_PATH).exists():
+    if KEY_PATH:
+        if not SERVICE_ACCOUNT:
+            raise ValueError("GEE_SERVICE_ACCOUNT is required when GEE_KEY_PATH is set")
+        if not Path(KEY_PATH).is_file():
+            raise FileNotFoundError(KEY_PATH)
         credentials = ee.ServiceAccountCredentials(SERVICE_ACCOUNT, KEY_PATH)
         ee.Initialize(credentials=credentials, project=GEE_PROJECT)
         print(f"[GEE] Initialized with service account project={GEE_PROJECT}.")
         return
-    ee.Initialize(project=FALLBACK_GEE_PROJECT)
-    print(f"[GEE] Initialized with user credentials project={FALLBACK_GEE_PROJECT}.")
+    if GEE_PROJECT:
+        ee.Initialize(project=GEE_PROJECT)
+    else:
+        ee.Initialize()
+    print(f"[GEE] Initialized with user authentication project={GEE_PROJECT or 'default'}.")
 
 
 def read_json(path: Path):

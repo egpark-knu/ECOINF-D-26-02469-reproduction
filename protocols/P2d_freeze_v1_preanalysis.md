@@ -1,9 +1,9 @@
 # P2d frozen protocol — M5/M8/M9
 
 - Protocol ID: `P2d_v1`
-- Worker turn: `T1_codex1_983b5b`
+- Original execution identifier: `[sanitized for public release]`
 - Frozen before any new M5 comparator, M8 correlation, or M9 model result.
-- Runtime: `/Users/eungyupark/anaconda3/envs/mas/bin/python3.12`
+- Runtime: `python3`
 - Seed: `20260815`
 - Allowed writes: only the paths named in `P2d_task_packet.md`.
 - Historical and original trees are read-only.
@@ -17,7 +17,7 @@
 | `revision_strategy.md` | `50b25d2f0a4a21ab76b3007e779b7d8048fe5a35c28a9f9db4a8931429a17506` |
 | `critical_path.md` | `8b7194a645e93c49aa7913df4d7cb53c8c608fb4040aa7eb28cb14b5b58f2a7b` |
 | `P1_REPORT.md` | `47f3d0dafa66441c947842fdb83254dd7eebfa623846b80434053a9d0065819b` |
-| `analysis_source_inventory_codex1.md` | `815cd969bd93ff116a4808975837a34174c6c24c77f391c8ea3cbcb45399498c` |
+| `analysis_source_inventory.md` | `815cd969bd93ff116a4808975837a34174c6c24c77f391c8ea3cbcb45399498c` |
 | `cyanobacteria_panel.csv` | `c958efe78888e8a0866c8cf3ab0c06ee74724c84e049feb8dc95126d3f952e2b` |
 | `insitu_annual_analysis_panel.csv` | `83fcf10f4a8b06b2adb0d09370321f1b24bb150fb5be9d0b19e9d487aa1039e7` |
 | `gate0_trajectory_2017_2025.csv` | `221e287d6bb76404b5d3311897a23fc0a734bc8b85447fb9c031a90024a795ac` |

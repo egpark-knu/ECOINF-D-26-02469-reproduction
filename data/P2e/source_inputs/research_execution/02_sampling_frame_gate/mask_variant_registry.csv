@@ -1,0 +1,9 @@
+variant_id,mask_type,occurrence_threshold,shoreline_exclusion_m,distance_bin,control_filter,dalseong_included,effect_rerun_status
+V00,current_persistent_water,50,0,all,all,True,local_current_mask_rerun
+V01,current_persistent_water,50,0,all,weak_control_excluded,True,local_current_mask_rerun
+V02,current_persistent_water,50,0,all,all,False,local_current_mask_rerun
+V03,current_persistent_water,50,0,all,weak_control_excluded,False,local_current_mask_rerun
+V04,occurrence_threshold_sensitivity,30,0,all,all,True,water_pixel_count_only
+V05,occurrence_threshold_sensitivity,70,0,all,all,True,water_pixel_count_only
+V06,channel_center_eroded,50,required,center,all,True,full_gee_export_required
+V07,shoreline_littoral_excluded,50,required,nearbank_removed,all,True,full_gee_export_required

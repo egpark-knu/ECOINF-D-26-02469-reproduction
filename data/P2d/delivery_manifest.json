@@ -11,136 +11,136 @@
   "files": [
     {
       "mtime": 1786771087.074617,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/M5_event_study.md",
+      "path": "source-root/revision_1/03_analysis/output/M5_event_study.md",
       "sha256": "693c00e6803c1088a589f42fba9db55403c672d6b7d64a70a0ea6de1f0010f02",
       "size_bytes": 3213
     },
     {
       "mtime": 1786771087.0747876,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/M8_correlation.md",
+      "path": "source-root/revision_1/03_analysis/output/M8_correlation.md",
       "sha256": "8ec3a79ae7eedbc25674a4fc319ae5fa47483bd0c6efac043877776f7ce4ce9b",
       "size_bytes": 3339
     },
     {
       "mtime": 1786771087.0748913,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/M9_hurdle.md",
+      "path": "source-root/revision_1/03_analysis/output/M9_hurdle.md",
       "sha256": "2e0e9b52f922ee46f12fa5690b9d559e92172347d72f32b612a871451a2824e4",
       "size_bytes": 5794
     },
     {
       "mtime": 1786771087.0750475,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/99_admin/reports/P2d_REPORT.md",
+      "path": "source-root/revision_1/99_admin/reports/P2d_REPORT.md",
       "sha256": "54391e8f6d7c2f7544a1edf1a3b63f332e35e4d33b46fcbe2b3d89e18d39a8db",
       "size_bytes": 4610
     },
     {
       "mtime": 1786770127.4636102,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_freeze_v1_preanalysis.md",
+      "path": "source-root/revision_1/03_analysis/frozen_protocols/P2d_freeze_v1_preanalysis.md",
       "sha256": "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
       "size_bytes": 10798
     },
     {
       "mtime": 1786770209.252046,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_M9_amendment_v1_1.md",
+      "path": "source-root/revision_1/03_analysis/frozen_protocols/P2d_M9_amendment_v1_1.md",
       "sha256": "c3e4fe46dff9f30978e2890187628cb9a77b48e50b6dcaee5a8dc40799f52c4e",
       "size_bytes": 3421
     },
     {
       "mtime": 1786770036.153224,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_freeze.md",
+      "path": "source-root/revision_1/03_analysis/frozen_protocols/P2d_freeze.md",
       "sha256": "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
       "size_bytes": 10798
     },
     {
       "mtime": 1786770678.2813175,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/source_manifest.json",
+      "path": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/source_manifest.json",
       "sha256": "926c451719d6d5f2cd29dba7d57da9aaafac7ac999c5b111aca00e711f86e9ab",
       "size_bytes": 15191
     },
     {
       "mtime": 1786771086.7875545,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/verification.json",
+      "path": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/verification.json",
       "sha256": "08171beac2b1fa48f484bc8030405861b15560b6ff3b41315e51c1a19169b0d2",
       "size_bytes": 14399
     },
     {
       "mtime": 1786771086.786369,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/artifact_hashes.csv",
+      "path": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/artifact_hashes.csv",
       "sha256": "eb98792113368eddca1b0bcee5feaa385b5e083dfdbf2810dfb3e5d946e2ef82",
       "size_bytes": 2446
     },
     {
       "mtime": 1786771086.7879782,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/COMPLETE",
+      "path": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/COMPLETE",
       "sha256": "8966c3ef4ea831cc1b18ec620dd8e87145f48c112a3656d40c58b8c7b9e88b6f",
       "size_bytes": 234
     },
     {
       "mtime": 1786769427.192963,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/m5_chronology.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/m5_chronology.py",
       "sha256": "4178efce1bef2f62a4ede0aea45396f4d3e9fcd33c12f22f9c2dee5f38d4777b",
       "size_bytes": 5359
     },
     {
       "mtime": 1786769486.4768817,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/m8_correlation.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/m8_correlation.py",
       "sha256": "6e67e700193af1d166e1cccea663060944eb905933eddf141d3e69a381477150",
       "size_bytes": 8715
     },
     {
       "mtime": 1786769890.3862915,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/m9_hurdle.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/m9_hurdle.py",
       "sha256": "78bd88f4f3d1f96351bf02d897e17da79945ef71ab722405daa9380103a3fd65",
       "size_bytes": 8902
     },
     {
       "mtime": 1786771055.050528,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/render_reports.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/render_reports.py",
       "sha256": "e84a895ea2e712d691b9b7f4947663ae32873dcb034310641553167dd97e4b72",
       "size_bytes": 19380
     },
     {
       "mtime": 1786770597.3935182,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/run_p2d.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/run_p2d.py",
       "sha256": "876bc4fad07a3196f708b94f579d2471cbe39932dbc300850e6ea042a81b95a5",
       "size_bytes": 27606
     },
     {
       "mtime": 1786770828.1320803,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/verify_p2d.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/verify_p2d.py",
       "sha256": "6a8671460d028b704f3c82703040cadf5f5d7dd82e4ae7fb2a1957af7f3e84a5",
       "size_bytes": 12106
     },
     {
       "mtime": 1786769284.214988,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/tests/test_m5_chronology.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/tests/test_m5_chronology.py",
       "sha256": "17304b4d335531a90a7f35be2b88219631c6d3fd6da42dde322531b47c30f81c",
       "size_bytes": 2393
     },
     {
       "mtime": 1786769467.0204382,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/tests/test_m8_correlation.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/tests/test_m8_correlation.py",
       "sha256": "dda2f4a498f919e6b15ff477d0cd6a6625048b1aa002e3811d511408331cd206",
       "size_bytes": 2805
     },
     {
       "mtime": 1786769870.8344703,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/tests/test_m9_hurdle.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/tests/test_m9_hurdle.py",
       "sha256": "b394bc93b488119e64e2ce27ff4ba5c5ba8aaf2520a4110e4c888921490d7449",
       "size_bytes": 4412
     },
     {
       "mtime": 1786770597.3931427,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/tests/test_runner_axis.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/tests/test_runner_axis.py",
       "sha256": "5dface6a17d6057ad73b69347b43d7e25368eae2d81124c5c0acd62aaa547e2b",
       "size_bytes": 2288
     },
     {
       "mtime": 1786769284.2155206,
-      "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/code/P2d/tests/test_source_contract.py",
+      "path": "source-root/revision_1/03_analysis/code/P2d/tests/test_source_contract.py",
       "sha256": "ec64b79da09764dcac9b0d49e6ace95c76108d7b5ba6eb62acff0077a1b61354",
       "size_bytes": 1269
     }
   ],
-  "verified_run": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4"
+  "verified_run": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4"
 }

@@ -46,6 +46,10 @@ M9_WINDOWS = {
     "sensitivity_july_september": [7, 8, 9],
     "sensitivity_annual": list(range(1, 13)),
 }
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_OUTPUT_PARENT = Path(os.environ.get(
+    "P2D_OUTPUT_PARENT", str(REPOSITORY_ROOT / "reproduction_output/P2d")
+))
 
 
 def sha256_file(path: Path) -> str:
@@ -75,10 +79,8 @@ def write_csv(path: Path, frame: pd.DataFrame, compression: str | None = None) -
     os.replace(temporary, path)
 
 
-def assert_output_jail(output_root: Path) -> Path:
-    allowed = Path(
-        "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d"
-    ).resolve()
+def assert_output_jail(output_root: Path, allowed_parent: Path | None = None) -> Path:
+    allowed = (allowed_parent or DEFAULT_OUTPUT_PARENT).resolve()
     root = output_root.resolve()
     if root == allowed or allowed not in root.parents:
         raise ValueError(f"output root escapes P2d jail: {root}")
@@ -131,7 +133,7 @@ def build_manifest(args: argparse.Namespace, output_root: Path) -> dict:
             "M8": [source_record(args.freeze)],
             "M9": [source_record(args.freeze), source_record(args.m9_amendment)],
         },
-        "worker_turn": "T1_codex1_983b5b",
+        "execution_origin": "public_reproduction",
         "created_at_utc": datetime.now(timezone.utc).isoformat(),
         "output_root": str(output_root),
         "seed": SEED,

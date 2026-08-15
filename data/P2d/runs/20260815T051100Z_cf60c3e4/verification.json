@@ -6,7 +6,7 @@
       "artifact_hashes.csv",
       "verification.json"
     ],
-    "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/artifact_hashes.csv",
+    "path": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4/artifact_hashes.csv",
     "sha256": "eb98792113368eddca1b0bcee5feaa385b5e083dfdbf2810dfb3e5d946e2ef82"
   },
   "failed_gates": [],
@@ -310,7 +310,7 @@
         },
         "threshold": {
           "conversion_applied": false,
-          "evidence_path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/Round_6/02_analysis/insitu_reversal/alert_exceedance_as_reported_screen.csv",
+          "evidence_path": "source-root/Round_6/02_analysis/insitu_reversal/alert_exceedance_as_reported_screen.csv",
           "evidence_sha256": "5ff9c6dfa8a0328d3e8df8bba637d933917b67c2c27d2f9b1f87677f37591a4c",
           "ledger_id": "R2-M09c",
           "reason": "No authoritative in-scope unit reconciliation; exceedance was not analyzed.",
@@ -372,13 +372,13 @@
         "protocol_records": [
           {
             "mtime": 1786770127.4636102,
-            "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_freeze_v1_preanalysis.md",
+            "path": "source-root/revision_1/03_analysis/frozen_protocols/P2d_freeze_v1_preanalysis.md",
             "sha256": "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
             "size_bytes": 10798
           },
           {
             "mtime": 1786770209.252046,
-            "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_M9_amendment_v1_1.md",
+            "path": "source-root/revision_1/03_analysis/frozen_protocols/P2d_M9_amendment_v1_1.md",
             "sha256": "c3e4fe46dff9f30978e2890187628cb9a77b48e50b6dcaee5a8dc40799f52c4e",
             "size_bytes": 3421
           }
@@ -401,7 +401,7 @@
         "first_run_created_at": "2026-08-15T04:55:26.278469+00:00",
         "recorded_protocol": {
           "mtime": 1786769534.9081,
-          "path": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/frozen_protocols/P2d_freeze.md",
+          "path": "source-root/revision_1/03_analysis/frozen_protocols/P2d_freeze.md",
           "sha256": "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf",
           "size_bytes": 10798
         }
@@ -413,7 +413,7 @@
       "status": "PASS"
     }
   },
-  "run_root": "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4",
+  "run_root": "source-root/revision_1/03_analysis/output/P2d/runs/20260815T051100Z_cf60c3e4",
   "status": "PASS",
   "verified_at_utc": "2026-08-15T05:18:06.786836+00:00",
   "warnings": [

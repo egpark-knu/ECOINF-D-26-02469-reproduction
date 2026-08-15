@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import hashlib
+import os
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -13,9 +14,10 @@ import pandas as pd
 from scipy import stats
 
 
-BASE = Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB")
-WORK = BASE / "manuscript_EI_hardening"
-PANEL = BASE / "Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv"
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+BASE = Path(os.environ.get("P2A_SOURCE_ROOT", str(REPOSITORY_ROOT / "raw")))
+WORK = Path(os.environ.get("P2A_WORK", str(REPOSITORY_ROOT / "reproduction_output/P2a_legacy")))
+PANEL = Path(os.environ.get("P2A_PANEL", str(REPOSITORY_ROOT / "data/insitu_annual_analysis_panel.csv")))
 OUT = WORK / "01_models"
 FIG = WORK / "03_manuscript/figures"
 TABLES = WORK / "03_manuscript/tables"

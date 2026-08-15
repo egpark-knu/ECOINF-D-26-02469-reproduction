@@ -32,9 +32,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-BASE = Path(os.environ.get("P2B_BASE", "/Users/eungyupark/Dropbox/Manuscripts/0_HAB"))
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+BASE = Path(os.environ.get("P2B_SOURCE_ROOT", str(REPOSITORY_ROOT / "raw")))
 CODE = Path(__file__).resolve().parent
-OUT = Path(os.environ.get("P2B_OUT", str(BASE / "revision_1/03_analysis/output/P2b")))
+OUT = Path(os.environ.get("P2B_OUT", str(REPOSITORY_ROOT / "reproduction_output/P2b")))
 PANEL = BASE / "Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv"
 SUBMITTED = BASE / "manuscript_EI_hardening/01_models/standardized_tau_models.csv"
 

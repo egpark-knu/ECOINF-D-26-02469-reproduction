@@ -10,29 +10,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from legacy_adapter import _load_vendor
 
 
-VENDOR = Path(
-    "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/"
-    "code/P2a_M1/vendor/hardening_specificity_analysis__c895385a.py"
-)
-PANEL = Path(
-    "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/"
-    "input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv"
-)
-MODELS = Path(
-    "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/"
-    "01_models/standardized_tau_models.csv"
-)
-INTERACTION = Path(
-    "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/manuscript_EI_hardening/"
-    "01_models/specificity_interaction.csv"
-)
+ROOT = Path(__file__).resolve().parents[3]
+VENDOR = ROOT / "code/P2a_M1/vendor/hardening_specificity_analysis__c895385a.py"
+PANEL = ROOT / "data/insitu_annual_analysis_panel.csv"
+LEGACY = ROOT / "data/P2a_M1/runs/20260815T042826Z_c2ac8933/legacy"
+MODELS = LEGACY / "standardized_tau_models.csv"
+INTERACTION = LEGACY / "specificity_interaction.csv"
 
 
 class LegacyRegressionAnchorTests(unittest.TestCase):
     def test_vendor_hash(self):
         self.assertEqual(
             hashlib.sha256(VENDOR.read_bytes()).hexdigest(),
-            "c895385a565dc06835e0a03129fbd3fcb97734aaaa2d62d9838c0e6917ca10b0",
+            "29f46b586460bf478e1c512683cdb07ce6e6b6f5b53a85857e2ba2967a1a833f",
         )
 
     def test_vendor_import_supports_dataclass_module_lookup(self):

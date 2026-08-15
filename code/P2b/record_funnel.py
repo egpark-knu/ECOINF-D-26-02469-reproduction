@@ -3,8 +3,9 @@
 import json, os
 from pathlib import Path
 import pandas as pd
-BASE=Path(os.environ.get("P2B_BASE","/Users/eungyupark/Dropbox/Manuscripts/0_HAB"))
-OUT=Path(os.environ.get("P2B_OUT",str(BASE/"revision_1/03_analysis/output/P2b")))
+REPOSITORY_ROOT=Path(__file__).resolve().parents[2]
+BASE=Path(os.environ.get("P2B_SOURCE_ROOT",str(REPOSITORY_ROOT/"raw")))
+OUT=Path(os.environ.get("P2B_OUT",str(REPOSITORY_ROOT/"reproduction_output/P2b")))
 y=pd.read_csv(BASE/"Round_6/01_data/insitu/cyanobacteria_panel.csv",low_memory=False)
 p=pd.read_csv(BASE/"Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv")
 ann=p[p.season_scope=="annual_all_samples"]; blo=p[p.season_scope=="bloom_season_06_10"]

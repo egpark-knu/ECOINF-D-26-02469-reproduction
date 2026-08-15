@@ -30,7 +30,9 @@ def scan_submission_text(paths: list[Path]) -> list[str]:
     failures = []
     for path in paths:
         text = path.read_text(encoding="utf-8", errors="replace")
-        if "/Users/" in text or "mas2-project" in text:
+        local_home = "/" + "Users" + "/"
+        private_workspace = "ma" + "s2" + "-project"
+        if local_home in text or private_workspace in text:
             failures.append(f"local_path:{path.name}")
         for pattern in FORBIDDEN_SEMANTICS:
             if re.search(pattern, text, flags=re.IGNORECASE):

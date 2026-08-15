@@ -16,8 +16,9 @@ import json
 import os
 from pathlib import Path
 
-BASE = Path(os.environ.get("P2E_BASE", "/Users/eungyupark/Dropbox/Manuscripts/0_HAB"))
-OUT = Path(os.environ.get("P2E_OUT", str(BASE / "revision_1/03_analysis/output/P2e")))
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+BASE = Path(os.environ.get("P2E_SOURCE_ROOT", str(REPOSITORY_ROOT / "data/P2e/source_inputs")))
+OUT = Path(os.environ.get("P2E_OUT", str(REPOSITORY_ROOT / "reproduction_output/P2e")))
 OUT.mkdir(parents=True, exist_ok=True)
 
 GATE = BASE / "research_execution/02_sampling_frame_gate"

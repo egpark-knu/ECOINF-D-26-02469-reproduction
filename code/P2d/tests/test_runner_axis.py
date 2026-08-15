@@ -1,4 +1,5 @@
 import unittest
+import tempfile
 from pathlib import Path
 import sys
 from unittest.mock import patch
@@ -13,9 +14,11 @@ from run_p2d import _attempt_model_row, _m9_verdict, assert_output_jail
 
 class RunnerAxisTests(unittest.TestCase):
     def test_output_jail_normalizes_relative_allowed_path_before_parent_walk(self):
-        target = Path("revision_1/03_analysis/output/P2d/runs/unit_test_not_created")
-        with patch("pathlib.Path.mkdir") as mkdir:
-            resolved = assert_output_jail(target)
+        with tempfile.TemporaryDirectory() as directory:
+            allowed = Path(directory) / "P2d"
+            target = allowed / "runs/unit_test_not_created"
+            with patch("pathlib.Path.mkdir") as mkdir:
+                resolved = assert_output_jail(target, allowed)
         self.assertTrue(resolved.is_absolute())
         self.assertEqual(resolved.name, "unit_test_not_created")
         mkdir.assert_called_once_with(parents=True)

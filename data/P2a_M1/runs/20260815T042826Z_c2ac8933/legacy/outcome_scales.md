@@ -4,7 +4,7 @@
 
 The existing Round 6 in-situ tau regressions use annual and bloom-season weir-year panels from:
 
-`/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv`
+`source-root/revision_1/03_analysis/input/P2a_M1/insitu_annual_analysis_panel__83fcf10f.csv`
 
 The panel contains two season scopes:
 

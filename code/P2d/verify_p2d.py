@@ -17,6 +17,10 @@ import pandas as pd
 BASE_SHA = "cf60dc3bc4935a55ab6ed55df6e8bc67c82fa4c1136077c1efb755206057d4cf"
 AMENDMENT_SHA = "c3e4fe46dff9f30978e2890187628cb9a77b48e50b6dcaee5a8dc40799f52c4e"
 FROZEN_LEDGER_SHA = "5c55ed42f8dd264e44436208de334c22f8c9858691be46935a34a1e0945708cd"
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_RUNS_ROOT = Path(os.environ.get(
+    "P2D_RUNS_ROOT", str(REPOSITORY_ROOT / "reproduction_output/P2d/runs")
+))
 
 
 def sha256_file(path: Path) -> str:
@@ -46,9 +50,7 @@ def iso_epoch(value: str) -> float:
 
 def verify(args: argparse.Namespace) -> dict:
     root = args.run_root.resolve()
-    allowed = Path(
-        "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2d/runs"
-    ).resolve()
+    allowed = args.allowed_runs_root.resolve()
     if allowed not in root.parents or not root.is_dir() or root.is_symlink():
         raise ValueError("run root is not a real directory inside the P2d run jail")
 
@@ -283,6 +285,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--base-freeze", type=Path, required=True)
     parser.add_argument("--amendment", type=Path, required=True)
     parser.add_argument("--current-ledger", type=Path, required=True)
+    parser.add_argument("--allowed-runs-root", type=Path, default=DEFAULT_RUNS_ROOT)
     return parser.parse_args()
 
 

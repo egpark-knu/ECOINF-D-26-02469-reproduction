@@ -16,8 +16,9 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-BASE = Path(os.environ.get("P2E_BASE", "/Users/eungyupark/Dropbox/Manuscripts/0_HAB"))
-OUT = Path(os.environ.get("P2E_OUT", str(BASE / "revision_1/03_analysis/output/P2e")))
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+BASE = Path(os.environ.get("P2E_SOURCE_ROOT", str(REPOSITORY_ROOT / "data/P2e/source_inputs")))
+OUT = Path(os.environ.get("P2E_OUT", str(REPOSITORY_ROOT / "reproduction_output/P2e")))
 GATE = BASE / "research_execution/02_sampling_frame_gate"
 PAIRS = GATE / "gate_results_site_year.csv"
 GEE = GATE / "gee_exports"

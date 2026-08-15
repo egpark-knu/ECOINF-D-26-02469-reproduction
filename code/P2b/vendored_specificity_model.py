@@ -14,8 +14,9 @@ import pandas as pd
 from scipy import stats
 
 
-BASE = Path("/Users/eungyupark/Dropbox/Manuscripts/0_HAB")
-WORK = Path(os.environ.get("P2B_WORK", "/Users/eungyupark/Dropbox/Manuscripts/0_HAB/revision_1/03_analysis/output/P2b"))
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+BASE = Path(os.environ.get("P2B_SOURCE_ROOT", str(REPOSITORY_ROOT / "raw")))
+WORK = Path(os.environ.get("P2B_WORK", str(REPOSITORY_ROOT / "reproduction_output/P2b")))
 PANEL = BASE / "Round_6/02_analysis/proxy_validation/insitu_annual_analysis_panel.csv"
 OUT = WORK / "01_models"
 FIG = WORK / "03_manuscript/figures"
