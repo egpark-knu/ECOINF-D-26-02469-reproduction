@@ -1,0 +1,11 @@
+# Data Availability Statement
+
+The authors declare that all data and code supporting the findings of this study are available in a public repository to ensure full reproducibility.
+
+The derived analysis-ready datasets and the exact Python scripts used for statistical modeling and satellite index extraction have been deposited at:
+[https://github.com/egpark-knu/ECOINF-D-26-02469-reproduction]
+
+A permanent DOI for this repository will be issued via Zenodo upon final acceptance:
+[DOI: Pending Author Issuance]
+
+Due to third-party distribution terms (e.g., KOGL Type 4 restrictions for K-water datasets) and excessive volume, the raw bulk API downloads are not redistributed directly. However, the exact scripts provided in the repository include explicit URLs and programmatic logic to re-acquire and process these raw datasets from their official government and Earth Engine endpoints.
